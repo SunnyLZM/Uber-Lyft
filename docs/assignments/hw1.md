@@ -11,17 +11,17 @@ In this assignment, you will benchmark some common data queries using both SQL a
 
     Some of the questions in this assignment ask you to write unit tests. Since "testing the test" would be complicated, here is how we will grade these questions:
 
-    1. You will receive full credit for your function implementation if it passes the test you wrote.
-    2. Your function will then be tested against a different battery of tests that is not provided to you. Your grade for the tests you write will be determined by how many of these secret tests you pass.
+    1. You will receive full credit for your **function implementation** if it passes the test you wrote, no matter how complete or incomplete the test is, as long as you write the test first. If you have done one cycle of red-green-refactor, you may continue with more cycles until your test covers all the desired behavior of the function.
+    2. Your function will then be tested against a different battery of tests that is not provided to you. Your grade for the tests you write will be determined by how many of these secret tests you pass. **You may only submit code in a passing 🟢 state once per cycle.** Then, the autograder must receive another 🔴 commit before you may continue. If you receive the same test failure twice in a row from the autograder, or if you fail more test cases than in your previous submission (this is called a *regression*), the autograder will be turned off until the submission deadline for that question. Thus, you still may receive full credit after the deadline but will not have the benefit of the autograder's feedback.
 
 🟢 and 🔴 circles indicate the status of the checks you need for credit for each question.
 ## Basic Unit Tests and Queries
 
-1. Examine the provided test in `tests/test_hw1.py` and its Pandas implementation `get_adults` that filters your generated dataset to include people who are 18 or older. Refactor the query to use Pandas instead.🟢
+1. Examine the provided test in `tests/test_hw1.py` and its Pandas implementation `filter_after_cutoff_age` that filters your generated dataset to include people who are 18 or older. Refactor the query to use SQL instead.🟢
 
-2. Now, examine the function and test for `avg_age_per_state` that calculates the mean age of people for each state. Refactor the query to use SQL instead.🟢
+2. Now, examine the SQL query and test for `avg_age_per_state` that calculates the mean age of people for each state. Refactor the query to use Pandas instead.🟢
 
-3. Write a test for a function `large_states_adult_age` which will use the data in `data/state_populations.csv` to calculates the mean age of adults in states with over 5 million people. Write the test such that this function takes the hypothetical output from the previous two functions as parameters.🔴
+3. Write a test for a function `large_states_adult_age` which will use the data in `data/state_populations.csv` to calculate the mean age of adults you generate in states with over 5 million people. Write the test such that this function takes the hypothetical output from `filter_after_cutoff_age` and `avg_age_per_state` as input parameters.🔴
 
 4. First, implement this function in Pandas, performing the filter _after_ the join.🟢
 

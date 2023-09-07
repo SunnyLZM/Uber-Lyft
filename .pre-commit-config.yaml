@@ -13,8 +13,9 @@ repos:
     rev: v1.1.326
     hooks:
     -   id: pyright
+        stages: [pre-push]
 -   repo: https://github.com/astral-sh/ruff-pre-commit
     rev: v0.0.287
     hooks:
-        - id: ruff
-          stages: [pre-push]
+    -   id: ruff
+        stages: [pre-push]
