@@ -3,7 +3,7 @@
 	"image": "mcr.microsoft.com/devcontainers/python:1-3.11-bullseye",
 	"features": {
 		"ghcr.io/devcontainers-contrib/features/mkdocs:2": {
-			"plugins": "mkdocs-material markdown-captions mkdocstrings[python]"
+			"plugins": "mkdocs-material markdown-captions mkdocstrings[python] mkdocs-nav-weight"
 		},
 		"ghcr.io/devcontainers-contrib/features/poetry:2": {},
 		"ghcr.io/devcontainers-contrib/features/pre-commit:2": {},
@@ -38,7 +38,8 @@
 				"ms-toolsai.jupyter",
 				"ms-python.black-formatter",
 				"yzhang.markdown-all-in-one",
-				"eamodio.gitlens"
+				"eamodio.gitlens",
+				"Evidence.sqltools-duckdb-driver"
 			],
 			"settings": {
 				"yaml.schemas": {
@@ -66,7 +67,6 @@
 					"editor.defaultFormatter": "ms-python.black-formatter",
 					"editor.formatOnSave": true
 				},
-				"python.formatting.provider": "none",
 				"python.terminal.activateEnvInCurrentTerminal": true
 			}
 		},
