@@ -11,6 +11,18 @@
 		"ghcr.io/eitsupi/devcontainer-features/duckdb-cli:1": {},
 		"ghcr.io/devcontainers-contrib/features/black:2": {}
 	},
+	"mounts": [
+		{
+			"source": "vscode-extensions",
+			"target": "/root/.vscode-server/extensions",
+			"type": "volume"
+		},
+		{
+			"source": "vscode-extensionsCache",
+			"target": "/root/.vscode-server/extensionsCache",
+			"type": "volume"
+		}
+	],
 	"postCreateCommand": "poetry install && pre-commit install",
 	"runArgs": [
 		"--name",
@@ -48,9 +60,14 @@
 				"files.insertFinalNewline": true,
 				"python.analysis.typeCheckingMode": "basic",
 				"editor.formatOnSave": true,
+				"notebook.formatOnSave.enabled": true,
+				"python.editor.defaultFormatter": "ms-python.black-formatter",
 				"[python]": {
-					"editor.defaultFormatter": "ms-python.black-formatter"
-				}
+					"editor.defaultFormatter": "ms-python.black-formatter",
+					"editor.formatOnSave": true
+				},
+				"python.formatting.provider": "none",
+				"python.terminal.activateEnvInCurrentTerminal": true
 			}
 		},
 		"codespaces": {
