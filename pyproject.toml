@@ -11,6 +11,7 @@ pytest = "^7.4.0"
 markdown-captions = "^2.1.2"
 pandas = "^2.1.0"
 duckdb = {version = "^0.8.2.dev4025", allow-prereleases = true}
+pandas-stubs = "^2.0.3.230814"
 
 [tool.poetry.group.dev.dependencies]
 ipykernel = "^6.25.2"

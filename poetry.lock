@@ -554,6 +554,21 @@ test = ["hypothesis (>=6.46.1)", "pytest (>=7.3.2)", "pytest-asyncio (>=0.17.0)"
 xml = ["lxml (>=4.8.0)"]
 
 [[package]]
+name = "pandas-stubs"
+version = "2.0.3.230814"
+description = "Type annotations for pandas"
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "pandas_stubs-2.0.3.230814-py3-none-any.whl", hash = "sha256:4b3dfc027d49779176b7daa031a3405f7b839bcb6e312f4b9f29fea5feec5b4f"},
+    {file = "pandas_stubs-2.0.3.230814.tar.gz", hash = "sha256:1d5cc09e36e3d9f9a1ed9dceae4e03eeb26d1b898dd769996925f784365c8769"},
+]
+
+[package.dependencies]
+numpy = {version = ">=1.25.0", markers = "python_version >= \"3.9\""}
+types-pytz = ">=2022.1.1"
+
+[[package]]
 name = "parso"
 version = "0.8.3"
 description = "A Python Parser"
@@ -952,6 +967,17 @@ docs = ["myst-parser", "pydata-sphinx-theme", "sphinx"]
 test = ["argcomplete (>=2.0)", "pre-commit", "pytest", "pytest-mock"]
 
 [[package]]
+name = "types-pytz"
+version = "2023.3.0.1"
+description = "Typing stubs for pytz"
+optional = false
+python-versions = "*"
+files = [
+    {file = "types-pytz-2023.3.0.1.tar.gz", hash = "sha256:1a7b8d4aac70981cfa24478a41eadfcd96a087c986d6f150d77e3ceb3c2bdfab"},
+    {file = "types_pytz-2023.3.0.1-py3-none-any.whl", hash = "sha256:65152e872137926bb67a8fe6cc9cfd794365df86650c5d5fdc7b167b0f38892e"},
+]
+
+[[package]]
 name = "tzdata"
 version = "2023.3"
 description = "Provider of IANA time zone data"
@@ -976,4 +1002,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "f2528e0d8c7c4cafd08c92dfef4f1e7777ea33884a4e5d9e955ea342e36b3955"
+content-hash = "f3354200fc726fbd271e2d35c7d1ede42f4fcb323f5ea36712fd87dcc4e1d596"
