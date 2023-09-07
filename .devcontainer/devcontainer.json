@@ -22,7 +22,6 @@
 				"ms-python.python",
 				"ms-python.vscode-pylance",
 				"tamasfe.even-better-toml",
-				"GitHub.copilot",
 				"charliermarsh.ruff",
 				"ms-toolsai.jupyter",
 				"ms-python.black-formatter",
@@ -47,7 +46,6 @@
 				"python.testing.pytestEnabled": true,
 				"python.defaultInterpreterPath": ".venv/bin/python",
 				"files.insertFinalNewline": true,
-				"python.editor.defaultFormatter": "ms-python.black-formatter",
 				"python.analysis.typeCheckingMode": "basic"
 			}
 		},
