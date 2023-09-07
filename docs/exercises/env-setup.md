@@ -118,7 +118,7 @@ Here are some considerations:
 
 Now, run `git switch -c hw0` to create a new branch named `hw0` off of your current branch and switch to it. The `-c` part of the command is the `create` flag for the `git switch` command. Finally, run `git push -u origin hw0` to push the branch to your origin (private) repo. Similarly to `git switch`'s `-t` flag, `git push`'s `-u`/`--set-upstream` flag sets the tracking branch for your local branch, so that you can use `git pull` and `git push` without specifying the branch name.
 
-Review the page on our [git strategy](../background/dataops/3-git-strategy.md) if you need a refresher on why we keep hw0-upstream and hw0 branches separate.
+Review the page on our [git strategy](../background/dataops/4-git-strategy.md) if you need a refresher on why we keep hw0-upstream and hw0 branches separate.
 
 ??? Warning "Upstream?"
 
@@ -176,7 +176,7 @@ Review the page on our [git strategy](../background/dataops/3-git-strategy.md) i
     Also likely to help is the usage of a GUI for git operations. While comfort with the command line is a valuable career skill, helpful for programming efficiency, and a marker of [technical sophistication](https://www.learnenough.com/command-line-tutorial#aside-technical_sophistication), using GUI tools can help you focus on concepts instead of command-line syntax. Here are some options:
     - VS Code's built in Git GUI is okay for staging, committing, and pushing code, but you can get a much clearer picture of your git tree using the GitLens extension for VS code, which will be installed by default in our Dev Containers in all future versions. Non-WSL users might also like using GitHub Desktop to manage their git repos; this is one of the few cases where I've been unable to cleanly install a software tool with WSL, but hopefully they will add support for it soon.
 
-1. Use git commands to stage (`git add`) and commit (`git commit`) your changes to `pyproject.toml` and `poetry.lock`. For some brief notes on what these commands are doing, see the [git glossary](../background/dataops/4-glossary.md).
+1. Use git commands to stage (`git add`) and commit (`git commit`) your changes to `pyproject.toml` and `poetry.lock`. For some brief notes on what these commands are doing, see the [git glossary](../background/dataops/3-glossary.md).
 
     ??? info "pyproject.toml & poetry.lock"
 
