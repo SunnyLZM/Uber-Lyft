@@ -1,3 +1,4 @@
+import duckdb
 import pandas as pd
 
 from fl23 import hw1
@@ -16,3 +17,11 @@ def test_avg_per_state():
         hw1.avg_per_state(people),
         pd.DataFrame({"State": ["IL", "MO"], "avg(Age)": [19, 17.5]}),
     )
+
+
+def test_1_uses_sql(mocker):
+    sql_spy = mocker.spy(duckdb, "sql")
+    pandas_spy = mocker.spy(pd.DataFrame, "query")
+
+    assert sql_spy.call_count == 1
+    assert pandas_spy.call_count == 0
