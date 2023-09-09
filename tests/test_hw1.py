@@ -1,4 +1,3 @@
-import duckdb
 import pandas as pd
 
 from fl23 import hw1
