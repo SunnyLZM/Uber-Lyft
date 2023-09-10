@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - hw1-upstream
+    paths:
+      - .github/.devcontainer/**
 
 jobs:
   build-and-push-image:
