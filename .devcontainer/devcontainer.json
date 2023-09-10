@@ -1,5 +1,5 @@
 {
-	"image": "ghcr.io/wustl-data/hw1:latest",
+	"image": "ghcr.io/wustl-data/hw1",
 	"postCreateCommand": "poetry install && pre-commit install",
 	"features": {
 		"ghcr.io/devcontainers-contrib/features/mkdocs:2": {
