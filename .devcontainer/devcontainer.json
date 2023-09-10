@@ -1,26 +1,5 @@
 {
 	"name": "CSE314A",
-	"image": "ghcr.io/wustl-data/hw1",
-	"postCreateCommand": "pre-commit install",
-	"features": {
-		"ghcr.io/devcontainers-contrib/features/mkdocs:2": {
-			"plugins": "mkdocs-material markdown-captions mkdocstrings[python] mkdocs-nav-weight"
-		}
-	},
-	"customizations": {
-		"vscode": {
-			"settings": {
-				"yaml.schemas": {
-					"https://squidfunk.github.io/mkdocs-material/schema.json": "mkdocs.yml"
-				},
-				"yaml.customTags": [
-					"!ENV scalar",
-					"!ENV sequence",
-					"tag:yaml.org,2002:python/name:materialx.emoji.to_svg",
-					"tag:yaml.org,2002:python/name:materialx.emoji.twemoji",
-					"tag:yaml.org,2002:python/name:pymdownx.superfences.fence_code_format"
-				]
-			}
-		}
-	}
+	"image": "ghcr.io/wustl-data/dev",
+	"postCreateCommand": "pre-commit install"
 }
