@@ -26,3 +26,4 @@ jobs:
         uses: devcontainers/ci@v0.3
         with:
           imageName: ghcr.io/wustl-data/hw1
+          subFolder: .github/.devcontainer
