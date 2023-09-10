@@ -1,6 +1,7 @@
 {
+	"name": "CSE314A",
 	"image": "ghcr.io/wustl-data/hw1",
-	"postCreateCommand": "poetry install && pre-commit install",
+	"postCreateCommand": "pre-commit install",
 	"features": {
 		"ghcr.io/devcontainers-contrib/features/mkdocs:2": {
 			"plugins": "mkdocs-material markdown-captions mkdocstrings[python] mkdocs-nav-weight"
