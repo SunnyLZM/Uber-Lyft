@@ -63,10 +63,6 @@
 				"editor.formatOnSave": true,
 				"notebook.formatOnSave.enabled": true,
 				"python.editor.defaultFormatter": "ms-python.black-formatter",
-				"[python]": {
-					"editor.defaultFormatter": "ms-python.black-formatter",
-					"editor.formatOnSave": true
-				},
 				"python.terminal.activateEnvInCurrentTerminal": true
 			}
 		},
