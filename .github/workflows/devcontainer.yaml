@@ -2,6 +2,8 @@ name: Publish HW1 Dev Container Image
 
 on:
   push:
+    branches:
+      - hw1-upstream
     paths:
       - .github/.devcontainer/**
       - .devcontainer/**
