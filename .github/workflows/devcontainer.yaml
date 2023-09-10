@@ -29,5 +29,4 @@ jobs:
         with:
           imageName: ghcr.io/wustl-data/hw1
           cacheFrom: ghcr.io/wustl-data/hw1
-          subFolder: .github
           push: always
