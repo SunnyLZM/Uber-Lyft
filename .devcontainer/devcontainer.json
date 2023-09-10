@@ -1,4 +1,9 @@
 {
 	"image": "ghcr.io/wustl-data/hw1:latest",
-	"postCreateCommand": "poetry install && pre-commit install"
+	"postCreateCommand": "poetry install && pre-commit install",
+	"features": {
+		"ghcr.io/devcontainers-contrib/features/mkdocs:2": {
+			"plugins": "mkdocs-material markdown-captions mkdocstrings[python] mkdocs-nav-weight"
+		}
+	}
 }
