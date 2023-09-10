@@ -2,25 +2,33 @@ name: HW1 Autograder
 
 on:
   push:
-    tags:
-      - 1.*.*
+    branches:
+      - hw1
 
 jobs:
-  autograder:
+  setup:
+    name: Set up environment
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
       - name: Login to GitHub Container Registry
         uses: docker/login-action@v2
         with:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
-      - uses: actions/checkout@v2
-      - name: Run local tests
+      - name: Problem 1
         uses: devcontainers/ci@v0.3
         with:
-          cacheFrom: ghcr.io/wustl-data/dev:latest
+          imageName: ghcr.io/wustl-data/dev
+          cacheFrom: ghcr.io/wustl-data/dev
           push: never
-          runCmd: poetry run pytest
-      - name: Run hidden tests
-        run: docker run --rm ghcr.io/wustl-data/fl23-autograder:main pytest
+          runCmd: poetry run pytest tests/test_autograde.py::test_1_uses_sql
+      - name: Problem 2
+        uses: devcontainers/ci@v0.3
+        with:
+          imageName: ghcr.io/wustl-data/dev
+          cacheFrom: ghcr.io/wustl-data/dev
+          push: never
+          runCmd: poetry run pytest tests/test_autograde.py::test_2_uses_pandas
