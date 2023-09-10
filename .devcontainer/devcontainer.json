@@ -1,3 +1,4 @@
 {
-	"image": "ghcr.io/wustl-data/hw1:latest"
+	"image": "ghcr.io/wustl-data/hw1:latest",
+	"postCreateCommand": "poetry install && pre-commit install"
 }

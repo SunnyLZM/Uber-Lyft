@@ -23,7 +23,6 @@
 			"type": "volume"
 		}
 	],
-	"postCreateCommand": "poetry install && pre-commit install",
 	"runArgs": [
 		"--name",
 		"CSE314A_dev"
