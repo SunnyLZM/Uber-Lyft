@@ -5,7 +5,7 @@ on:
     branches:
       - hw1-upstream
     paths:
-      - .github
+      - .github/**
 
 jobs:
   build-and-push-image:
