@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - .github/.devcontainer/**
+      - .devcontainer/**
 
 jobs:
   build-and-push-image:
