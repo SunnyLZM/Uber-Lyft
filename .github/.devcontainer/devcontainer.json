@@ -11,6 +11,7 @@
 		"ghcr.io/eitsupi/devcontainer-features/duckdb-cli:1": {},
 		"ghcr.io/devcontainers-contrib/features/black:2": {}
 	},
+    "postCreateCommand": "poetry install",
 	"mounts": [
 		{
 			"source": "vscode-extensions",
