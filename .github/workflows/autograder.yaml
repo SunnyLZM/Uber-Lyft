@@ -18,9 +18,6 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
       - uses: actions/checkout@v2
-      - uses: actions/setup-python@v2
-        with:
-          python-version: 3.11
       - name: Run local tests
         uses: devcontainers/ci@v0.3
         with:
