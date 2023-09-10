@@ -21,7 +21,7 @@ In this assignment, you will benchmark some common data queries using both SQL a
 
 2. Now, examine the SQL query and test for `avg_age_per_state` that calculates the mean age of people for each state. Refactor the query to use Pandas instead.🟢
 
-3. Write a test for a function `large_states_adult_age` which will use the data in `data/state_populations.csv` to calculate the mean age of adults you generate in states with over 5 million people. Write the test such that this function takes the hypothetical output from `filter_after_cutoff_age` and `avg_age_per_state` as input parameters.🔴
+3. Write a test for a function `large_states_adult_age` which will use the data in `data/state_populations.csv` to calculate the mean age of adults you generate in states with over 5 million people. 🔴
 
 4. First, implement this function in Pandas, performing the filter _after_ the join.🟢
 
