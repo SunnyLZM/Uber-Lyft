@@ -21,14 +21,12 @@ jobs:
       - name: Problem 1
         uses: devcontainers/ci@v0.3
         with:
-          imageName: ghcr.io/wustl-data/dev
-          cacheFrom: ghcr.io/wustl-data/dev
+          cacheFrom: ghcr.io/wustl-data/hw1
           push: never
           runCmd: poetry run pytest tests/test_autograde.py::test_1_uses_sql
       - name: Problem 2
         uses: devcontainers/ci@v0.3
         with:
-          imageName: ghcr.io/wustl-data/dev
-          cacheFrom: ghcr.io/wustl-data/dev
+          cacheFrom: ghcr.io/wustl-data/hw1
           push: never
           runCmd: poetry run pytest tests/test_autograde.py::test_2_uses_pandas
