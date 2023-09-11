@@ -1,5 +1,5 @@
 {
 	"name": "CSE314A",
-	"image": "ghcr.io/wustl-data/dev",
+	"image": "ghcr.io/wustl-data/hw1",
 	"postCreateCommand": "pre-commit install"
 }
