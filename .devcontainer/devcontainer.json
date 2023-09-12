@@ -1,5 +1,16 @@
 {
 	"name": "CSE314A",
 	"image": "ghcr.io/wustl-data/hw1",
-	"postCreateCommand": "pre-commit install"
+	"postCreateCommand": "pre-commit install",
+	"customizations": {
+		"codespaces": {
+			"repositories": {
+				"wustl-data/fl23": {
+					"permissions": {
+						"contents": "read"
+					}
+				}
+			}
+		}
+	}
 }
