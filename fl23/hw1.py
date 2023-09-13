@@ -17,6 +17,6 @@ def filter_after_cutoff_age(people: pd.DataFrame, cutoff_age: int) -> pd.DataFra
 
 def avg_per_state(people: pd.DataFrame) -> pd.DataFrame:
     """Compute the average age per state."""
-    result = people.groupby("State")["Age"].mean().reset_index()
-    result.columns = ["State", "avg(Age)"]
-    return result
+    result = people.groupby("State")["Age"].mean().reset_index().rename(columns={"Age": "avg(Age)"})
+    return result.reset_index(drop=True)
+
