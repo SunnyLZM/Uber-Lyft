@@ -1,0 +1,11 @@
+schemaVersion: 2.0.0
+
+fileExistenceTests:
+  - name: Test Stub
+    path: /workspaces/fl23-autograder/tests/test_action.py
+    shouldExist: true
+  - name: Test from submitted repo
+    path: fl23-autograder/tests/test_autograde.py
+
+metadataTest:
+  workdir: "/workspaces/"

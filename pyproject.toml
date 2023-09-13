@@ -13,6 +13,7 @@ pandas = "^2.1.0"
 duckdb = { version = "^0.8.2.dev4025", allow-prereleases = true }
 pandas-stubs = "^2.0.3.230814"
 pytest-mock = "^3.11.1"
+pre-commit = "^3.4.0"
 
 [tool.poetry.group.dev.dependencies]
 ipykernel = "^6.25.2"
@@ -31,12 +32,13 @@ venv = ".venv"
 [tool.ruff]
 select = ["ALL"]
 ignore = ["D100", "D104"]
-per-file-ignores = { "tests/test_*.py" = [
+per-file-ignores = { "tests/**/*.py" = [
     "S101",
     "D100",
     "D103",
     "ANN201",
     "ANN001",
+    "INP001",
 ] }
 
 [tool.ruff.pydocstyle]

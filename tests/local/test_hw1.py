@@ -16,3 +16,7 @@ def test_avg_per_state():
         hw1.avg_per_state(people),
         pd.DataFrame({"State": ["IL", "MO"], "avg(Age)": [19, 17.5]}),
     )
+
+
+def test_large_states_adult_age():
+    assert hw1.large_states_adult_age() is None

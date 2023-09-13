@@ -1,0 +1,28 @@
+name: Test autograder configuration
+
+on:
+  push:
+
+jobs:
+  tests:
+    name: Test the container configuration
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v2
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Pull autograder image
+        run: docker pull ghcr.io/wustl-data/fl23-autograder:latest
+
+      - name: Install Container Structure Test
+        run: curl -LO https://storage.googleapis.com/container-structure-test/latest/container-structure-test-linux-amd64 && chmod +x container-structure-test-linux-amd64 && sudo mv container-structure-test-linux-amd64 /usr/local/bin/container-structure-test
+
+      - name: Run Container Structure Test
+        run: container-structure-test test --image ghcr.io/wustl-data/fl23-autograder:latest --config cst.yaml

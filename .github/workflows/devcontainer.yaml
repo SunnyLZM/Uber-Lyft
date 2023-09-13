@@ -30,3 +30,4 @@ jobs:
           imageName: ghcr.io/wustl-data/hw1
           cacheFrom: ghcr.io/wustl-data/hw1
           push: always
+          runCmd: container-structure-test --help
