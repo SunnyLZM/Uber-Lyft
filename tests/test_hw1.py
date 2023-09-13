@@ -16,3 +16,10 @@ def test_avg_per_state():
         hw1.avg_per_state(people),
         pd.DataFrame({"State": ["IL", "MO"], "avg(Age)": [19, 17.5]}),
     )
+
+def test_large_states_adult_age():
+    people = pd.DataFrame({"State": ["Missouri", "Missouri", "Montana"], "Age": [17, 18, 19]})
+    pd.testing.assert_frame_equal(
+        hw1.large_states_adult_age(people),
+        pd.DataFrame({"State": ["Missouri"], "avg(Age)":[17.5]}),
+    )
