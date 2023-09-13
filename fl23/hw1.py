@@ -4,7 +4,7 @@ import pandas as pd
 
 def filter_after_cutoff_age(people: pd.DataFrame, cutoff_age: int) -> pd.DataFrame:
     """Filter a data frame of people to only include people older than a cutoff age."""
-    con = duckdb.connect()
+    con = duckdb.connect(database=":memory:")
     con.register("people", people)
     return duckdb.sql(
         f"""
