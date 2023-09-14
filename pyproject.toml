@@ -49,5 +49,5 @@ convention = "google"
 version_toml = ["pyproject.toml:tool.poetry.version"]
 
 [tool.semantic_release.branches.HW1]
-matches = ["hw1-upstream"]
+match = "hw1-upstream"
 build_metadata = "hw1"
