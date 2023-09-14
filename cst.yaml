@@ -2,7 +2,7 @@ schemaVersion: 2.0.0
 
 fileExistenceTests:
   - name: Test from submitted repo
-    path: fl23-autograder/tests/local/test_autograde.py
+    path: autograder/tests/local/test_autograde.py
 
 metadataTest:
   workdir: "/workspaces/"
