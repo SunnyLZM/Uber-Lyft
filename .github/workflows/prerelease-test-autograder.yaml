@@ -14,7 +14,11 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Does filter_after_cutoff_age use SQL?
-        run: pytest tests/local/test_autograde.py::test_1_uses_sql
+        uses: devcontainers/ci@v0.3
+        with:
+          cacheFrom: ghcr.io/wustl-data/autograder
+          push: never
+          runCmd: pytesttests/local/test_autograde.py::test_1_uses_sql
 
   p2:
     name: Problem 2
@@ -37,11 +41,16 @@ jobs:
     name: Problem 3
     runs-on: ubuntu-latest
     steps:
+
       - name: Checkout Repo
         uses: actions/checkout@v4
 
       - name: Does your test cover all example cases?
-        run: docker run -w /workspaces/autograder -v .:/workspaces/autograder ghcr.io/wustl-data/autograder pytest /workspaces/autograder/tests/hidden/test_action.py::test_autograder_parge_states_adult_age
+        uses: devcontainers/ci@v0.3
+        with:
+          cacheFrom: ghcr.io/wustl-data/autograder
+          push: never
+          runCmd: poetry run pytest tests/local/test_autograde.py::test_1_uses_sql
   p4:
     name: Problem 4
     runs-on: ubuntu-latest
@@ -50,7 +59,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Does your implementation get your test to pass?
-        run: pytest tests/local/test_hw1.py::test_large_states_adult_age
+        run: poetry run pytest tests/local/test_hw1.py::test_large_states_adult_age
   p5:
     name: Problem 5
     runs-on: ubuntu-latest
@@ -59,7 +68,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Does your implementation get your test to pass?
-        run: pytest tests/local/test_hw1.py::test_large_states_adult_age
+        run: poetry run pytest tests/local/test_hw1.py::test_large_states_adult_age
   p6:
     name: Problem 6
     runs-on: ubuntu-latest
@@ -67,8 +76,13 @@ jobs:
       - name: Checkout Repo
         uses: actions/checkout@v4
 
+      - name: Does your test cover all example cases?
+        uses: devcontainers/ci@v0.3
+        with:
+          cacheFrom: ghcr.io/wustl-data/autograder
+          push: never
       - name: Does your implementation get your test to pass?
-        run: pytest tests/local/test_hw1.py::test_large_states_adult_age
+        run: poetry run pytest /workspaces/autograder/tests/hidden/test_action.py::test_autograder_generate_people
   p7:
     name: Problem 7
     runs-on: ubuntu-latest
