@@ -2,6 +2,39 @@
 
 
 
+## v0.1.0+hw1 (2023-09-14)
+
+### Ci
+
+* ci(typo): p1 test run ([`0d3ec65`](https://github.com/wustl-data/fl23/commit/0d3ec65588f92a79e92499c4317e6df9999b008b))
+
+* ci(autograder): add setup steps to each job ([`6de1b11`](https://github.com/wustl-data/fl23/commit/6de1b11d06cde53d477d11b4b57a47a357608a48))
+
+### Feature
+
+* feat(autograder): add manual run option for autograder ([`6c73cad`](https://github.com/wustl-data/fl23/commit/6c73cad9eaef40008061e4d6f881ea37c004ea72))
+
+### Unknown
+
+* Merge pull request #34 from wustl-data/hw1-prerelease
+
+HW1 Release ([`cf235cb`](https://github.com/wustl-data/fl23/commit/cf235cbc5420143d1ac790a8a600c7582defa5eb))
+
+* run pytest without poetry ([`9f1b0ac`](https://github.com/wustl-data/fl23/commit/9f1b0ac519218fc4ffe2785f3bb4f6b1a19e50ee))
+
+* run job in container ([`45b6506`](https://github.com/wustl-data/fl23/commit/45b650607d6bc3b55385aff95217fcd69083657e))
+
+* remove setup step ([`a1b2fdb`](https://github.com/wustl-data/fl23/commit/a1b2fdb356e5904a7b789ffeaa8d6bdda8306a31))
+
+* split step ([`29ffe9f`](https://github.com/wustl-data/fl23/commit/29ffe9f31278ad72f28c531e6031477db7e6f5a2))
+
+* add prerelease trigger to autograder ([`cc7ebbb`](https://github.com/wustl-data/fl23/commit/cc7ebbb7786b8102ebcd3744c4d94d079dc51572))
+
+* split autograder into jobs ([`3440646`](https://github.com/wustl-data/fl23/commit/3440646cc39da69bff514cfe6e60bcb6daa3c701))
+
+* split tests ([`63f3410`](https://github.com/wustl-data/fl23/commit/63f34107cd69ed6cc2283f522ff8d044dc1d47f8))
+
+
 ## v0.0.2+hw1 (2023-09-14)
 
 ### Fix
