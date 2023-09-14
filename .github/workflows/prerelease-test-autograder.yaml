@@ -10,7 +10,7 @@ jobs:
     name: Problem 1
     runs-on: ubuntu-latest
     container:
-      image: ghcr.io/wustl-data/fl23-autograder:latest
+      image: ghcr.io/wustl-data/autograder:latest
       credentials:
         username: ${{ github.actor }}
         password: ${{ secrets.github_token }}
@@ -25,7 +25,7 @@ jobs:
     name: Problem 2
     runs-on: ubuntu-latest
     container:
-      image: ghcr.io/wustl-data/fl23-autograder:latest
+      image: ghcr.io/wustl-data/autograder:latest
       credentials:
         username: ${{ github.actor }}
         password: ${{ secrets.github_token }}
@@ -47,7 +47,7 @@ jobs:
     name: Problem 3
     runs-on: ubuntu-latest
     container:
-      image: ghcr.io/wustl-data/fl23-autograder:latest
+      image: ghcr.io/wustl-data/autograder:latest
       credentials:
         username: ${{ github.actor }}
         password: ${{ secrets.github_token }}
@@ -56,12 +56,12 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Does your test cover all example cases?
-        run: docker run -w /workspaces/autograder -v .:/workspaces/autograder ghcr.io/wustl-data/fl23-autograder pytest /workspaces/autograder/tests/hidden/test_action.py::test_autograder_parge_states_adult_age
+        run: docker run -w /workspaces/autograder -v .:/workspaces/autograder ghcr.io/wustl-data/autograder pytest /workspaces/autograder/tests/hidden/test_action.py::test_autograder_parge_states_adult_age
   p4:
     name: Problem 4
     runs-on: ubuntu-latest
     container:
-      image: ghcr.io/wustl-data/fl23-autograder:latest
+      image: ghcr.io/wustl-data/autograder:latest
       credentials:
         username: ${{ github.actor }}
         password: ${{ secrets.github_token }}
@@ -75,7 +75,7 @@ jobs:
     name: Problem 5
     runs-on: ubuntu-latest
     container:
-      image: ghcr.io/wustl-data/fl23-autograder:latest
+      image: ghcr.io/wustl-data/autograder:latest
       credentials:
         username: ${{ github.actor }}
         password: ${{ secrets.github_token }}
@@ -89,7 +89,7 @@ jobs:
     name: Problem 6
     runs-on: ubuntu-latest
     container:
-      image: ghcr.io/wustl-data/fl23-autograder:latest
+      image: ghcr.io/wustl-data/autograder:latest
       credentials:
         username: ${{ github.actor }}
         password: ${{ secrets.github_token }}
@@ -103,7 +103,7 @@ jobs:
     name: Problem 7
     runs-on: ubuntu-latest
     container:
-      image: ghcr.io/wustl-data/fl23-autograder:latest
+      image: ghcr.io/wustl-data/autograder:latest
       credentials:
         username: ${{ github.actor }}
         password: ${{ secrets.github_token }}
@@ -115,12 +115,12 @@ jobs:
         run: pytest tests/local/test_hw1.py::test_large_states_adult_age
 
       - name: Does your test cover all example cases?
-        run: docker run -w /workspaces/autograder -v .:/workspaces/autograder ghcr.io/wustl-data/fl23-autograder pytest /workspaces/autograder/tests/hidden/test_action.py::test_autograder_generate_people
+        run: docker run -w /workspaces/autograder -v .:/workspaces/autograder ghcr.io/wustl-data/autograder pytest /workspaces/autograder/tests/hidden/test_action.py::test_autograder_generate_people
   p8:
     name: Problem 8
     runs-on: ubuntu-latest
     container:
-      image: ghcr.io/wustl-data/fl23-autograder:latest
+      image: ghcr.io/wustl-data/autograder:latest
       credentials:
         username: ${{ github.actor }}
         password: ${{ secrets.github_token }}
