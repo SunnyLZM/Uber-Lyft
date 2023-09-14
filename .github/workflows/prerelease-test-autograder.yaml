@@ -6,7 +6,6 @@ on:
       - hw1-prerelease
 
 jobs:
-  p1_dev:
   p1:
     name: Problem 1
     runs-on: ubuntu-latest

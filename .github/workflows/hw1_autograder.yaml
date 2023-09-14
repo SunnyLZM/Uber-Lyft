@@ -3,17 +3,6 @@ name: HW1 Autograder
 on: workflow_dispatch
 
 jobs:
-  p1_dev:
-    name: Run pytest in autograder
-    uses: devcontainers/ci@v0.3
-    with:
-      # [Optional] If you have a separate workflow like the one above
-      # to pre-build your container image, you can reference it here
-      # to speed up your application build workflows as well!
-      cacheFrom: ghcr.io/example/example-devcontainer
-
-      push: never
-      runCmd: pytest
   p1:
     name: Problem 1
     runs-on: ubuntu-latest
