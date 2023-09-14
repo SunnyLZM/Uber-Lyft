@@ -5,7 +5,8 @@ on:
     branches:
       - hw1-upstream
     paths:
-      - .github/**
+      - .devcontainer/**
+      - poetry.lock
 
 jobs:
   build-and-push-image:
@@ -30,4 +31,3 @@ jobs:
           imageName: ghcr.io/wustl-data/hw1
           cacheFrom: ghcr.io/wustl-data/hw1
           push: always
-          runCmd: container-structure-test --help
