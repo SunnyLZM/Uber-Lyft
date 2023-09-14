@@ -62,7 +62,7 @@ jobs:
         with:
           cacheFrom: ghcr.io/wustl-data/autograder
           push: never
-          runCmd: poetry run pytest tests/local/test_autograde.py::test_1_uses_sql
+          runCmd: pytest tests/local/test_autograde.py::test_1_uses_sql
   p4:
     name: Problem 4
     runs-on: ubuntu-latest
@@ -111,8 +111,7 @@ jobs:
         with:
           cacheFrom: ghcr.io/wustl-data/autograder
           push: never
-      - name: Does your implementation get your test to pass?
-        run: poetry run pytest /workspaces/autograder/tests/hidden/test_action.py::test_autograder_generate_people
+          runCmd: pytest tests/local/test_action.py::test_autograder_generate_people
   p7:
     name: Problem 7
     runs-on: ubuntu-latest
