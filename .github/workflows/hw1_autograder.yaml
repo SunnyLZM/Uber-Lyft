@@ -87,7 +87,7 @@ jobs:
       if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
 
     - name: Does filter_after_cutoff_age use SQL?
-      run: pip poetry run pytest tests/local/test_autograde.py::test_1_uses_sql
+      run: poetry run pytest tests/local/test_autograde.py::test_1_uses_sql
 
   p2:
     name: Problem 2
