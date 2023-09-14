@@ -5,143 +5,128 @@ on:
     branches:
       - hw1-prerelease
 
-jobs:
-  p1:
-    name: Problem 1
-    runs-on: ubuntu-latest
-    container:
-      image: ghcr.io/wustl-data/fl23-autograder:latest
-      credentials:
-        username: ${{ github.actor }}
-        password: ${{ secrets.github_token }}
-    steps:
-      - name: Checkout Repo
-        uses: actions/checkout@v4
+      jobs:
+        p1:
+          name: Problem 1
+          runs-on: ubuntu-latest
+          container:
+            image: ghcr.io/wustl-data/fl23-autograder:latest
+            credentials:
+              username: ${{ github.actor }}
+              password: ${{ secrets.github_token }}
+          steps:
+            - name: Checkout Repo
+              uses: actions/checkout@v4
 
-      - name: Does filter_after_cutoff_age use SQL?
-        run: pytest tests/local/test_autograde.py::test_1_uses_sql
+            - name: Does filter_after_cutoff_age use SQL?
+              run: pytest tests/local/test_autograde.py::test_1_uses_sql
 
-  p2:
-    name: Problem 2
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Repo
-        uses: actions/checkout@v4
+        p2:
+          name: Problem 2
+          runs-on: ubuntu-latest
+          container:
+            image: ghcr.io/wustl-data/fl23-autograder:latest
+            credentials:
+              username: ${{ github.actor }}
+              password: ${{ secrets.github_token }}
+          steps:
+            - name: Checkout Repo
+              uses: actions/checkout@v4
 
-      - name: Login to GitHub Container Registry
-        uses: docker/login-action@v2
-        with:
-          registry: ghcr.io
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
+            - name: Login to GitHub Container Registry
+              uses: docker/login-action@v2
+              with:
+                registry: ghcr.io
+                username: ${{ github.actor }}
+                password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Install Poetry
-        run: pipx install poetry
+            - name: Does avg_per_state avoid using SQL?
+              run: pytest tests/local/test_autograde.py::test_2_uses_pandas
 
-      - name: Set up python
-        id: setup-python
-        uses: actions/setup-python@v4
-        with:
-          python-version: "3.11"
-          cache: "poetry"
-      - name: Install poetry
-        uses: snok/install-poetry@v1.3.4
-        with:
-          virtualenvs-create: true
-          virtualenvs-in-project: true
-      - name: Load cached venv
-        id: cached-poetry-dependencies
-        uses: actions/cache@v3
-        with:
-          path: .venv
-          key: venv-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}
+        p3:
+          name: Problem 3
+          runs-on: ubuntu-latest
+          container:
+            image: ghcr.io/wustl-data/fl23-autograder:latest
+            credentials:
+              username: ${{ github.actor }}
+              password: ${{ secrets.github_token }}
+          steps:
+            - name: Checkout Repo
+              uses: actions/checkout@v4
 
-      - name: Install dependencies
-        run: poetry install
-        if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
+            - name: Does your test cover all example cases?
+              run: docker run -w /workspaces/autograder -v .:/workspaces/autograder ghcr.io/wustl-data/fl23-autograder pytest /workspaces/autograder/tests/hidden/test_action.py::test_autograder_parge_states_adult_age
+        p4:
+          name: Problem 4
+          runs-on: ubuntu-latest
+          container:
+            image: ghcr.io/wustl-data/fl23-autograder:latest
+            credentials:
+              username: ${{ github.actor }}
+              password: ${{ secrets.github_token }}
+          steps:
+            - name: Checkout Repo
+              uses: actions/checkout@v4
 
-      - name: Does avg_per_state avoid using SQL?
-        run: poetry run pytest tests/local/test_autograde.py::test_2_uses_pandas
+            - name: Does your implementation get your test to pass?
+              run: pytest tests/local/test_hw1.py::test_large_states_adult_age
+        p5:
+          name: Problem 5
+          runs-on: ubuntu-latest
+          container:
+            image: ghcr.io/wustl-data/fl23-autograder:latest
+            credentials:
+              username: ${{ github.actor }}
+              password: ${{ secrets.github_token }}
+          steps:
+            - name: Checkout Repo
+              uses: actions/checkout@v4
 
-  p3:
-    name: Problem 3
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Repo
-        uses: actions/checkout@v4
+            - name: Does your implementation get your test to pass?
+              run: pytest tests/local/test_hw1.py::test_large_states_adult_age
+        p6:
+          name: Problem 6
+          runs-on: ubuntu-latest
+          container:
+            image: ghcr.io/wustl-data/fl23-autograder:latest
+            credentials:
+              username: ${{ github.actor }}
+              password: ${{ secrets.github_token }}
+          steps:
+            - name: Checkout Repo
+              uses: actions/checkout@v4
 
-      - name: Login to GitHub Container Registry
-        uses: docker/login-action@v2
-        with:
-          registry: ghcr.io
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
+            - name: Does your implementation get your test to pass?
+              run: pytest tests/local/test_hw1.py::test_large_states_adult_age
+        p7:
+          name: Problem 7
+          runs-on: ubuntu-latest
+          container:
+            image: ghcr.io/wustl-data/fl23-autograder:latest
+            credentials:
+              username: ${{ github.actor }}
+              password: ${{ secrets.github_token }}
+          steps:
+            - name: Checkout Repo
+              uses: actions/checkout@v4
 
-      - name: Install Poetry
-        run: pipx install poetry
+            - name: Does your implementation get your test to pass?
+              run: pytest tests/local/test_hw1.py::test_large_states_adult_age
 
-      - name: Set up python
-        id: setup-python
-        uses: actions/setup-python@v4
-        with:
-          python-version: "3.11"
-          cache: "poetry"
-      - name: Install poetry
-        uses: snok/install-poetry@v1.3.4
-        with:
-          virtualenvs-create: true
-          virtualenvs-in-project: true
-      - name: Load cached venv
-        id: cached-poetry-dependencies
-        uses: actions/cache@v3
-        with:
-          path: .venv
-          key: venv-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}
+            - name: Does your test cover all example cases?
+              run: docker run -w /workspaces/autograder -v .:/workspaces/autograder ghcr.io/wustl-data/fl23-autograder pytest /workspaces/autograder/tests/hidden/test_action.py::test_autograder_generate_people
+        p8:
+          name: Problem 8
+          runs-on: ubuntu-latest
+          container:
+            image: ghcr.io/wustl-data/fl23-autograder:latest
+            credentials:
+              username: ${{ github.actor }}
+              password: ${{ secrets.github_token }}
+          steps:
+            - name: Checkout Repo
+              uses: actions/checkout@v4
 
-      - name: Install dependencies
-        run: poetry install
-        if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
-
-      - name: Does your test cover all example cases?
-        run: docker run -w /workspaces/autograder -v .:/workspaces/autograder ghcr.io/wustl-data/fl23-autograder pytest /workspaces/autograder/tests/hidden/test_action.py
-  p4:
-    name: Problem 4
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Repo
-        uses: actions/checkout@v4
-
-      - name: Login to GitHub Container Registry
-        uses: docker/login-action@v2
-        with:
-          registry: ghcr.io
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Install Poetry
-        run: pipx install poetry
-
-      - name: Set up python
-        id: setup-python
-        uses: actions/setup-python@v4
-        with:
-          python-version: "3.11"
-          cache: "poetry"
-      - name: Install poetry
-        uses: snok/install-poetry@v1.3.4
-        with:
-          virtualenvs-create: true
-          virtualenvs-in-project: true
-      - name: Load cached venv
-        id: cached-poetry-dependencies
-        uses: actions/cache@v3
-        with:
-          path: .venv
-          key: venv-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}
-
-      - name: Install dependencies
-        run: poetry install
-        if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
-
-      - name: Does your implementation get your test to pass?
-        run: poetry run pytest tests/local/test_hw1.py::test_large_states_adult_age
+            - name: Does your implementation get your test to pass?
+              run: pytest tests/local/test_hw1.py::test_generate_people.py
