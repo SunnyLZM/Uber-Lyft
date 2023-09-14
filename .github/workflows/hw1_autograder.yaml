@@ -132,8 +132,8 @@ jobs:
     - name: Does avg_per_state avoid using SQL?
       run: poetry run pytest tests/local/test_autograde.py::test_2_uses_pandas
 
-  p3_4:
-    name: Problems 3 and 4
+  p3:
+    name: Problem 3
     runs-on: ubuntu-latest
     needs: setup
     steps:
@@ -174,6 +174,45 @@ jobs:
 
       - name: Does your test cover all example cases?
         run: docker run -w /workspaces/autograder -v .:/workspaces/autograder ghcr.io/wustl-data/fl23-autograder pytest /workspaces/autograder/tests/hidden/test_action.py
+  p4:
+      name: Problem 4
+      runs-on: ubuntu-latest
+      needs: setup
+      steps:
+        - name: Checkout Repo
+          uses: actions/checkout@v4
 
-      - name: Does your implementation get your test to pass?
-        run: poetry run pytest tests/local/test_hw1.py::test_large_states_adult_age
+        - name: Login to GitHub Container Registry
+          uses: docker/login-action@v2
+          with:
+            registry: ghcr.io
+            username: ${{ github.actor }}
+            password: ${{ secrets.GITHUB_TOKEN }}
+
+        - name: Install Poetry
+          run: pipx install poetry
+
+        - name: Set up python
+          id: setup-python
+          uses: actions/setup-python@v4
+          with:
+            python-version: "3.11"
+            cache: "poetry"
+        - name: Install poetry
+          uses: snok/install-poetry@v1.3.4
+          with:
+            virtualenvs-create: true
+            virtualenvs-in-project: true
+        - name: Load cached venv
+          id: cached-poetry-dependencies
+          uses: actions/cache@v3
+          with:
+            path: .venv
+            key: venv-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}
+
+        - name: Install dependencies
+          run: poetry install
+          if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
+
+        - name: Does your implementation get your test to pass?
+          run: poetry run pytest tests/local/test_hw1.py::test_large_states_adult_age
