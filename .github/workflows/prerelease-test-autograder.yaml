@@ -14,7 +14,8 @@ jobs:
       credentials:
         username: ${{ github.actor }}
         password: ${{ secrets.github_token }}
-      volumes: ./fl23:/workspaces/fl23
+      volumes:
+        - ./fl23:/workspaces/fl23
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v4
