@@ -2,6 +2,13 @@
 
 
 
+## v0.1.2+hw1 (2023-09-14)
+
+### Fix
+
+* fix(autograder): use dev containers for tests ([`e633061`](https://github.com/wustl-data/fl23/commit/e633061d2380ccd751ae4fe78e369ebb5e7bade9))
+
+
 ## v0.1.1+hw1 (2023-09-14)
 
 ### Build
