@@ -30,6 +30,7 @@ venvPath = "."
 venv = ".venv"
 
 [tool.ruff]
+fix = true
 select = ["ALL"]
 ignore = ["D100", "D104"]
 per-file-ignores = { "tests/**/*.py" = [
