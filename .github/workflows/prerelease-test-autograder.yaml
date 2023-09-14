@@ -41,7 +41,7 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Does avg_per_state avoid using SQL?
-        run: pytest tests/local/test_autograde.py::test_2_uses_pandas
+        run: poetry run pytest tests/local/test_autograde.py::test_2_uses_pandas
 
   p3:
     name: Problem 3
