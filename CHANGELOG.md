@@ -2,6 +2,13 @@
 
 
 
+## v0.0.2+hw1 (2023-09-14)
+
+### Fix
+
+* fix(devcontainer): pre-build from repo .devcontainer ([`c9f4cd6`](https://github.com/wustl-data/fl23/commit/c9f4cd6ba140e0a37274d0a5a291543f01ba7bc5))
+
+
 ## v0.0.1+hw1 (2023-09-14)
 
 ### Documentation
