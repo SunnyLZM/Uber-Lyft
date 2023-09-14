@@ -24,7 +24,7 @@ jobs:
         password: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Does filter_after_cutoff_age use SQL?
-      run: poetry run pytest tests/local/test_autograde.py::test_1_uses_sql
+      run: pytest tests/local/test_autograde.py::test_1_uses_sql
 
   p2:
     name: Problem 2
