@@ -49,9 +49,9 @@ jobs:
     name: Problem 1
     runs-on: ubuntu-latest
     needs: setup
-      steps:
-        - name: Does filter_after_cutoff_age use SQL?
-          run: poetry run pytest tests/local/test_autograde.py::test_1_uses_sql
+    steps:
+      - name: Does filter_after_cutoff_age use SQL?
+        run: poetry run pytest tests/local/test_autograde.py::test_1_uses_sql
 
   p2:
     name: Problem 2
@@ -63,9 +63,9 @@ jobs:
 
   p3_4:
     name: Problems 3 and 4
+    runs-on: ubuntu-latest
     needs: setup
     steps:
-
       - name: Does your test cover all example cases?
         run: docker run -w /workspaces/autograder -v .:/workspaces/autograder ghcr.io/wustl-data/fl23-autograder pytest /workspaces/autograder/tests/hidden/test_action.py
 
