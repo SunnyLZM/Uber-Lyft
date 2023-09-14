@@ -68,3 +68,45 @@ jobs:
 
       - name: Does your implementation get your test to pass?
         run: pytest tests/local/test_hw1.py::test_large_states_adult_age
+  p5:
+    name: Problem 5
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/wustl-data/fl23-autograder:latest
+      credentials:
+        username: ${{ github.actor }}
+        password: ${{ secrets.github_token }}
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+
+      - name: Does your implementation get your test to pass?
+        run: pytest tests/local/test_hw1.py::test_large_states_adult_age
+  p6:
+    name: Problem 6
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/wustl-data/fl23-autograder:latest
+      credentials:
+        username: ${{ github.actor }}
+        password: ${{ secrets.github_token }}
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+
+      - name: Does your implementation get your test to pass?
+        run: pytest tests/local/test_hw1.py::test_large_states_adult_age
+  p8:
+    name: Problem 8
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/wustl-data/fl23-autograder:latest
+      credentials:
+        username: ${{ github.actor }}
+        password: ${{ secrets.github_token }}
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+
+      - name: Does your implementation get your test to pass?
+        run: pytest tests/local/test_hw1.py::test_generate_people.py
