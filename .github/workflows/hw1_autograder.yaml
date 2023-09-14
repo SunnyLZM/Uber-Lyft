@@ -46,13 +46,13 @@ jobs:
         if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
 
       - name: Problem 1
-        run: poetry run pytest tests/test_autograde.py::test_1_uses_sql
+        run: poetry run pytest tests/local/test_autograde.py::test_1_uses_sql
 
       - name: Problem 2
-        run: poetry run pytest tests/test_autograde.py::test_2_uses_pandas
+        run: poetry run pytest tests/local/test_autograde.py::test_2_uses_pandas
 
       - name: Problem 3
-        run: docker run -w /workspaces/autograder -v .:/workspaces/autograder ghcr.io/wustl-data/fl23-autograder pytest /workspaces/autograder/tests/test_action.py
+        run: docker run -w /workspaces/autograder -v .:/workspaces/autograder ghcr.io/wustl-data/fl23-autograder pytest /workspaces/autograder/tests/hidden/test_action.py
 
       - name: Problem 4
-        run: poetry run pytest tests/test_hw1.py::test_large_states_adult_age
+        run: poetry run pytest tests/local/test_hw1.py::test_large_states_adult_age
