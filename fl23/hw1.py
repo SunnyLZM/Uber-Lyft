@@ -18,3 +18,8 @@ def avg_per_state(people: pd.DataFrame) -> pd.DataFrame:  # noqa: ARG001
         GROUP BY State
         """,
     ).df()
+
+
+def generate_people(n: int) -> pd.DataFrame:
+    """Generate a data frame of people with random ages, states, names, and text."""
+    return pd.DataFrame()

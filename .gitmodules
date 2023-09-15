@@ -1,0 +1,3 @@
+[submodule "tests/hidden"]
+	path = tests/hidden
+	url = git@github.com:wustl-data/fl23-autograder.git
