@@ -46,7 +46,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Does your test cover all example cases?
-        run: docker run -w /workspaces/autograder -v .:/workspaces/autograder ghcr.io/wustl-data/autograder pytest /workspaces/autograder/tests/hidden/test_action.py::test_autograder_parge_states_adult_age
+        run: docker run -w /workspaces/autograder -v .:/workspaces/autograder ghcr.io/wustl-data/autograder pytest /workspaces/autograder/tests/hidden/test_action.py::test_autograder_large_states_adult_age
   p4:
     name: Problem 4
     runs-on: ubuntu-latest
