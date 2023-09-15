@@ -5,7 +5,8 @@ on:
     branches:
       - hw1-upstream
     paths:
-      - .github/**
+      - .devcontainer/**
+      - poetry.lock
 
 jobs:
   build-and-push-image:

@@ -1,7 +1,11 @@
 {
 	"name": "CSE314A",
 	"image": "ghcr.io/wustl-data/hw1",
-	"postCreateCommand": "pre-commit install",
+	"postCreateCommand": "npm install @devcontainers/cli && curl -LO https://storage.googleapis.com/container-structure-test/latest/container-structure-test-linux-amd64 && chmod +x container-structure-test-linux-amd64 && sudo mv container-structure-test-linux-amd64 /usr/local/bin/container-structure-test && echo alias cst='container-structure-test' >>  /home/vscode/.bashrc && poetry install && pre-commit install",
+	"features": {
+		"ghcr.io/devcontainers/features/docker-in-docker:2": {},
+		"ghcr.io/devcontainers/features/node:1": {}
+	},
 	"customizations": {
 		"codespaces": {
 			"repositories": {
