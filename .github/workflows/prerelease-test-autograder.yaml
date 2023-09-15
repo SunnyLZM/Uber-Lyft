@@ -25,4 +25,4 @@ jobs:
           imageName: ghcr.io/wustl-data/hw1
           cacheFrom: ghcr.io/example/hw1
           push: always
-          runCmd: pytest
+          runCmd: poetry run pytest
