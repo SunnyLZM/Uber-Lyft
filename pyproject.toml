@@ -45,6 +45,8 @@ per-file-ignores = { "tests/**/*.py" = [
     "ANN201",
     "ANN001",
     "INP001",
+    "PLR2004",
+    "F821",
 ] }
 
 [tool.ruff.pydocstyle]
