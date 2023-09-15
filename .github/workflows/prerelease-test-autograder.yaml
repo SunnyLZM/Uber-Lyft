@@ -19,10 +19,9 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Pre-build image and run autograder
+      - name: Run autograder
         uses: devcontainers/ci@v0.3
         with:
-          imageName: ghcr.io/wustl-data/hw1
           cacheFrom: ghcr.io/example/hw1
-          push: always
+          push: never
           runCmd: poetry run pytest
