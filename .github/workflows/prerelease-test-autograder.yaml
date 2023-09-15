@@ -24,4 +24,4 @@ jobs:
         with:
           cacheFrom: ghcr.io/example/hw1
           push: never
-          runCmd: poetry run pytest
+          runCmd: poetry run pytest --maxfail=0
