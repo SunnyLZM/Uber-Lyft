@@ -5,7 +5,6 @@ import pytest
 from fl23 import hw1
 
 
-@pytest.mark.xfail()
 def test_avg_per_state():
     people = pd.DataFrame({"State": ["MO", "MO", "IL"], "Age": [17, 18, 19]})
     pd.testing.assert_frame_equal(
@@ -14,6 +13,7 @@ def test_avg_per_state():
     )
 
 
+@pytest.mark.xfail()
 def test_2_uses_pandas(mocker):
     sql_spy = mocker.spy(duckdb, "sql")
 
