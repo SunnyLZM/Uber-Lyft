@@ -12,7 +12,8 @@
 			"extensions": [
 				"ms-python.python",
 				"github.vscode-github-actions",
-				"tamasfe.even-better-toml"
+				"tamasfe.even-better-toml",
+				"charliermarsh.ruff"
 			],
 			"settings": {
 				"python.editor.defaultFormatter": "ms-python.black-formatter",
@@ -20,7 +21,9 @@
 				"jupyter.runStartupCommands": [
 					"%load_ext autoreload",
 					"%autoreload 2"
-				]
+				],
+				"gitlens.showWelcomeOnInstall": false,
+				"gitlens.showWhatsNewAfterUpgrades": false
 			}
 		},
 		"codespaces": {
