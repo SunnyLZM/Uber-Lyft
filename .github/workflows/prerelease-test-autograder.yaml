@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - hw1-prerelease
+      - hw1
+  workflow_dispatch:
 
 jobs:
   autograder:
@@ -22,6 +24,6 @@ jobs:
       - name: Run autograder
         uses: devcontainers/ci@v0.3
         with:
-          cacheFrom: ghcr.io/example/hw1
+          cacheFrom: ghcr.io/wustl-data/autograder:latest
           push: never
           runCmd: poetry run pytest --maxfail=0
