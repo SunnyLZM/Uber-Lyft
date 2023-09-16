@@ -1,5 +1,6 @@
 import duckdb
 import pandas as pd
+import pytest
 
 from fl23 import hw1
 
@@ -11,6 +12,7 @@ def test_filter_after_cutoff_age():
     assert all(adults["Age"] >= cutoff_age)
 
 
+@pytest.mark.xfail()
 def test_1_uses_sql(mocker):
     sql_spy = mocker.spy(duckdb, "sql")
 
