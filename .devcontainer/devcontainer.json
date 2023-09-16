@@ -15,7 +15,11 @@
 			"settings": {
 				"[python]": {
 					"editor.defaultFormatter": "ms-python.black-formatter"
-				}
+				},
+				"jupyter.runStartupCommands": [
+					"%load_ext autoreload",
+					"%autoreload 2"
+				]
 			}
 		},
 		"codespaces": {
