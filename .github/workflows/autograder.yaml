@@ -1,5 +1,4 @@
-name: Test run of autograder for pre-release
-
+name: HW1 Autograder
 on:
   push:
     branches:
