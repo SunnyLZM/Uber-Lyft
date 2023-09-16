@@ -11,6 +11,13 @@
 		"ghcr.io/devcontainers-contrib/features/pre-commit:2": {}
 	},
 	"customizations": {
+		"vscode": {
+			"settings": {
+				"[python]": {
+					"editor.defaultFormatter": "ms-python.black-formatter"
+				}
+			}
+		},
 		"codespaces": {
 			"repositories": {
 				"wustl-data/fl23": {
