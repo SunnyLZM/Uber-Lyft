@@ -2,6 +2,76 @@
 
 
 
+## v0.1.2+hw1 (2023-09-14)
+
+### Fix
+
+* fix(autograder): use dev containers for tests ([`e633061`](https://github.com/wustl-data/fl23/commit/e633061d2380ccd751ae4fe78e369ebb5e7bade9))
+
+
+## v0.1.1+hw1 (2023-09-14)
+
+### Build
+
+* build(autograder): adjust paths for /autograder name change ([`66e8be5`](https://github.com/wustl-data/fl23/commit/66e8be5a496e9fbc2878ab28fee8da8617687a78))
+
+### Ci
+
+* ci: use credentials at container step ([`101f3b4`](https://github.com/wustl-data/fl23/commit/101f3b4c47ea54cdc529ccda0fb901e827ae132f))
+
+### Fix
+
+* fix: use new image name ([`45ee9d0`](https://github.com/wustl-data/fl23/commit/45ee9d0f7189382a3dd1aa1819ae8235165daf3d))
+
+### Unknown
+
+* use poetry test 2 ([`d904a67`](https://github.com/wustl-data/fl23/commit/d904a670740f7421f199d1960a1f97b459092064))
+
+* only run pytest in devcontainer ([`e01d354`](https://github.com/wustl-data/fl23/commit/e01d354da5ecac2e699bc528f2cdea7d19e823c1))
+
+* authenticate jobs ([`ddb6467`](https://github.com/wustl-data/fl23/commit/ddb6467734dd19d44ce6aa7446064b583ab1b561))
+
+* run devcontainer for h idden tests ([`b7dd4c3`](https://github.com/wustl-data/fl23/commit/b7dd4c33d3569a86734ea75bd41984efa5b5b966))
+
+* use dev container for tests ([`3f650a2`](https://github.com/wustl-data/fl23/commit/3f650a22febc9d10ebb54e1c5fbfef1a5eed349c))
+
+* poetry install ([`2d9be19`](https://github.com/wustl-data/fl23/commit/2d9be19b0334b79409afad500ec38accdfbd575c))
+
+* add devcontainer cli ([`e918a88`](https://github.com/wustl-data/fl23/commit/e918a8878bd7e108020d2dddc3f71ed3a44c599a))
+
+* syntax cleanup ([`ce0db14`](https://github.com/wustl-data/fl23/commit/ce0db1404ae0f32ad6c9c99d5949f892666523a9))
+
+* use action as step not job ([`6f95829`](https://github.com/wustl-data/fl23/commit/6f95829dad8e9ba6d57dceaa4e13f831e194c289))
+
+* add devcontainer test to prerelease release group ([`b70df80`](https://github.com/wustl-data/fl23/commit/b70df8022663fa6545b54e0550f9ceb8ba65a2bc))
+
+* Merge branch &#39;hw1-upstream&#39; into hw1-prerelease ([`b5748ac`](https://github.com/wustl-data/fl23/commit/b5748ac1457abb5db6cf413bcb039c8cd9a7a2f0))
+
+* use devcontainer for e2e test ([`255c95c`](https://github.com/wustl-data/fl23/commit/255c95c8516a3173448126fe5cf31812138a284d))
+
+* use new image name ([`11803c4`](https://github.com/wustl-data/fl23/commit/11803c40e6452d7aaf35af342b88aa56833d3ca3))
+
+* poetry install in dev container ([`94af05e`](https://github.com/wustl-data/fl23/commit/94af05e8d6e744d557fe11f9741975676d84ee58))
+
+* format workflow ([`c50bfff`](https://github.com/wustl-data/fl23/commit/c50bfff378603b56da08731e51c06cb0604b35f5))
+
+* Merge branch &#39;hw1-upstream&#39; into hw1-prerelease ([`939e82c`](https://github.com/wustl-data/fl23/commit/939e82c364351f6c7be8255cfbfbe637eba36cb6))
+
+* add all tests to prerelease test run ([`f517022`](https://github.com/wustl-data/fl23/commit/f5170226e130f100980d1f50a4b3b12da492de00))
+
+* add rest of the problems tests ([`30dc37a`](https://github.com/wustl-data/fl23/commit/30dc37a85bd283c949870f9373c377671f68a6de))
+
+* use containers for test runs ([`a73e3a2`](https://github.com/wustl-data/fl23/commit/a73e3a239af7c0cbbe602203d1d5c7b825373565))
+
+* remove volume ([`791042c`](https://github.com/wustl-data/fl23/commit/791042c5eff52766996ae5b24e9d852e94b4de02))
+
+* fix actions syntax ([`e09e016`](https://github.com/wustl-data/fl23/commit/e09e016f0e3b69983bc8d5c20a5030673402411b))
+
+* bind mount fl23 ([`87c17da`](https://github.com/wustl-data/fl23/commit/87c17da2897f555094078928934a5ff2b99d051a))
+
+* add separate workflow for pre release test of autograder ([`31f7906`](https://github.com/wustl-data/fl23/commit/31f790683a05dcea843cffa0a820d6378505accc))
+
+
 ## v0.1.0+hw1 (2023-09-14)
 
 ### Ci
