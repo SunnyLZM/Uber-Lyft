@@ -1,21 +1,21 @@
 {
 	"name": "CSE314A",
-	"image": "ghcr.io/wustl-data/hw1",
-	"postCreateCommand": "npm install @devcontainers/cli && curl -LO https://storage.googleapis.com/container-structure-test/latest/container-structure-test-linux-amd64 && chmod +x container-structure-test-linux-amd64 && sudo mv container-structure-test-linux-amd64 /usr/local/bin/container-structure-test && echo alias cst='container-structure-test' >>  /home/vscode/.bashrc && poetry install && pre-commit install",
+	"image": "mcr.microsoft.com/devcontainers/python",
+	"postCreateCommand": "poetry install && pre-commit install",
 	"features": {
-		"ghcr.io/devcontainers/features/docker-in-docker:2": {},
-		"ghcr.io/devcontainers/features/node:1": {},
-		"ghcr.io/devcontainers-contrib/features/act:1": {},
 		"ghcr.io/devcontainers/features/github-cli:1": {},
 		"ghcr.io/devcontainers-contrib/features/poetry:2": {},
 		"ghcr.io/devcontainers-contrib/features/pre-commit:2": {}
 	},
 	"customizations": {
 		"vscode": {
+			"extensions": [
+				"ms-python.python",
+				"github.vscode-github-actions"
+			],
 			"settings": {
-				"[python]": {
-					"editor.defaultFormatter": "ms-python.black-formatter"
-				},
+				"python.editor.defaultFormatter": "ms-python.black-formatter",
+				"python.defaultInterpreterPath": ".venv/bin/python",
 				"jupyter.runStartupCommands": [
 					"%load_ext autoreload",
 					"%autoreload 2"
