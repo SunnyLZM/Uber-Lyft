@@ -20,4 +20,4 @@ def avg_per_state(people: pd.DataFrame) -> pd.DataFrame:
     result = people.groupby("State")["Age"].mean().reset_index().rename(columns={"Age": "avg(Age)"})
     return result.reset_index(drop=True)
 
-
+def
