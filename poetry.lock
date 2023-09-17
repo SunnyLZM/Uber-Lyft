@@ -277,6 +277,20 @@ files = [
 tests = ["asttokens", "littleutils", "pytest", "rich"]
 
 [[package]]
+name = "faker"
+version = "19.6.1"
+description = "Faker is a Python package that generates fake data for you."
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "Faker-19.6.1-py3-none-any.whl", hash = "sha256:64c8513c53c3a809075ee527b323a0ba61517814123f3137e4912f5d43350139"},
+    {file = "Faker-19.6.1.tar.gz", hash = "sha256:5d6b7880b3bea708075ddf91938424453f07053a59f8fa0453c1870df6ff3292"},
+]
+
+[package.dependencies]
+python-dateutil = ">=2.4"
+
+[[package]]
 name = "filelock"
 version = "3.12.3"
 description = "A platform independent file lock."
@@ -1197,4 +1211,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "a5b61904da6b6cc7df6694f5061cde8d8a9c99045b2ab6691d9d56f3210b7ad1"
+content-hash = "18cd7c5d061088c998d08141908affd07d31b4bbbaf523355c9276fed5fbdcc0"

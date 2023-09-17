@@ -28,3 +28,8 @@ def test_large_states_adult_age():
         hw1.large_states_adult_age(people, cutoff_population),
         pd.DataFrame({"State": ["Missouri"], "avg(Age)": [18.5]}),
     )
+
+def test_generate_people():
+    n = 10
+    people = hw1.generate_people(n)
+    assert people.columns.tolist() == ["first_name", "last_name", "Age", "State", "random_sentence"]
