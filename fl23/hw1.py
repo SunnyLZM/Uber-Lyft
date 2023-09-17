@@ -20,4 +20,10 @@ def avg_per_state(people: pd.DataFrame) -> pd.DataFrame:
     result = people.groupby("State")["Age"].mean().reset_index().rename(columns={"Age": "avg(Age)"})
     return result.reset_index(drop=True)
 
-def
+# def large_states_adult_age(people: pd.DataFrame, cutoff_population: int) -> pd.DataFrame:
+#     state = pd.read_csv("data/state_population.csv")
+#     data = state.merge(people,left_on="state")
+#     large_sates = data[data["state"]>cutoff_population]
+#     adult_age
+
+
