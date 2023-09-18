@@ -3,8 +3,9 @@ import pandas as pd
 from faker import Faker
 
 
-def filter_after_cutoff_age(people: pd.DataFrame, cutoff_age: int) -> pd.DataFrame:
+def filter_after_cutoff_age(people: pd.DataFrame) -> pd.DataFrame:
     """Filter a data frame of people to only include people older than a cutoff age."""
+    cutoff_age = 18
     con = duckdb.connect(database=":memory:")
     con.register("people", people)
     return duckdb.sql(
