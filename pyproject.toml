@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "fl23"
-version = "0.1.2+hw1"
+version = "0.2.0+hw1"
 description = ""
 authors = ["Ty Schlichenmeyer <ty.schlich@gmail.com>"]
 readme = "README.md"
@@ -15,6 +15,11 @@ pandas-stubs = "^2.0.3.230814"
 pytest-mock = "^3.11.1"
 pre-commit = "^3.4.0"
 faker = "^19.6.1"
+pytest-md-report = "^0.4.1"
+hypothesis = "^6.84.3"
+us = "^3.1.1"
+python-semantic-release = "^8.0.8"
+pandera = "^0.16.1"
 
 [tool.poetry.group.dev.dependencies]
 ipykernel = "^6.25.2"
@@ -25,6 +30,8 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+addopts = ['-x']
+md_report = true
 
 [tool.pyright]
 venvPath = "."
@@ -41,6 +48,8 @@ per-file-ignores = { "tests/**/*.py" = [
     "ANN201",
     "ANN001",
     "INP001",
+    "PLR2004",
+    "F821",
 ] }
 
 [tool.ruff.pydocstyle]

@@ -18,4 +18,10 @@ repos:
     rev: v0.0.287
     hooks:
     -   id: ruff
-        stages: [pre-push]
+        stages: [pre-commit, pre-push]
+
+-   repo: https://github.com/compilerla/conventional-pre-commit
+    rev: v2.4.0
+    hooks:
+      - id: conventional-pre-commit
+        stages: [commit-msg]
