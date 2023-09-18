@@ -16,7 +16,8 @@
 				"ms-python.black-formatter",
 				"yzhang.markdown-all-in-one",
 				"eamodio.gitlens",
-				"Evidence.sqltools-duckdb-driver"
+				"Evidence.sqltools-duckdb-driver",
+				"ms-toolsai.datawrangler"
 			],
 			"settings": {
 				"python.testing.pytestArgs": [

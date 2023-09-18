@@ -1,0 +1,31 @@
+name: HW1 Autograder
+on:
+  push:
+    branches:
+      - hw1-prerelease
+      - hw1
+  workflow_dispatch:
+
+jobs:
+  autograder:
+    name: Autograder
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: true
+          token: ${{ secrets.AUTOGRADER_KEY }}
+
+      - name: Log in to GitHub Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Run autograder
+        uses: devcontainers/ci@v0.3
+        with:
+          cacheFrom: ghcr.io/wustl-data/autograder:latest
+          push: never
+          runCmd: poetry run pytest --maxfail=0
