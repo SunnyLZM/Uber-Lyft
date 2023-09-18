@@ -2,6 +2,13 @@
 
 
 
+## v0.2.1+hw1 (2023-09-18)
+
+### Fix
+
+* fix: allow duckdb.execute method for p1 ([`6151791`](https://github.com/wustl-data/fl23/commit/61517910d58b8e1672b485e59a902e580d6470f8))
+
+
 ## v0.2.0+hw1 (2023-09-18)
 
 ### Build
