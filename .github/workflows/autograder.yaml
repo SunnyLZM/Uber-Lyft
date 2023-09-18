@@ -15,17 +15,53 @@ jobs:
         with:
           submodules: true
           token: ${{ secrets.AUTOGRADER_KEY }}
-
-      - name: Log in to GitHub Container Registry
-        uses: docker/login-action@v3
+          fetch-depth: 0
+      - name: Install poetry
+        run: pipx install poetry
+      - uses: actions/setup-python@v4
         with:
-          registry: ghcr.io
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Run autograder
-        uses: devcontainers/ci@v0.3
+          python-version: 3.11
+          cache: poetry
+      - run: poetry install
+      - name: Tests 1 & 2
+        run: poetry run pytest --maxfail=0 tests/test_1.py tests/test_2.py
+      - name: Test 4
+        run: git checkout $(git tag -l "1.4.*" | sort -V | tail -n 1) fl23/hw1.py && poetry run pytest --maxfail=0 tests/test_4.py
+      - name: Test 5
+        run: git checkout $(git tag -l "1.5.*" | sort -V | tail -n 1) fl23/hw1.py && poetry run pytest --maxfail=0 tests/test_5.py
+      - name: Test 6
+        run: git checkout $(git tag -l "1.6.*" | sort -V | tail -n 1) fl23/hw1.py && poetry run pytest --maxfail=0 tests/test_6.py
+  hiddentest3:
+    name: Hidden Test 3
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
         with:
-          cacheFrom: ghcr.io/wustl-data/autograder:latest
-          push: never
-          runCmd: poetry run pytest --maxfail=0
+          submodules: true
+          token: ${{ secrets.AUTOGRADER_KEY }}
+          fetch-depth: 0
+      - name: Install poetry
+        run: pipx install poetry
+      - uses: actions/setup-python@v4
+        with:
+          python-version: 3.11
+          cache: poetry
+      - run: poetry install
+      - run: poetry run pytest --maxfail=0 tests/hidden/test_3.py
+  hiddentest7:
+    name: Hidden Test 7
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: true
+          token: ${{ secrets.AUTOGRADER_KEY }}
+          fetch-depth: 0
+      - name: Install poetry
+        run: pipx install poetry
+      - uses: actions/setup-python@v4
+        with:
+          python-version: 3.11
+          cache: poetry
+      - run: poetry install
+      - run: poetry run pytest --maxfail=0 tests/hidden/test_7.py
