@@ -2,6 +2,109 @@
 
 
 
+## v0.2.0+hw1 (2023-09-18)
+
+### Build
+
+* build(dev): install act ([`6f5be21`](https://github.com/wustl-data/fl23/commit/6f5be2134c8a75abb55c93b7151f3fcd61d50400))
+
+### Ci
+
+* ci(dev): toml, ruff extensions ([`4427c8f`](https://github.com/wustl-data/fl23/commit/4427c8fed52e86635d361aed18c7d076febd0f10))
+
+* ci(dev): add toml to devcontainer ([`c61bc24`](https://github.com/wustl-data/fl23/commit/c61bc24197021c6dcee472aba1fccae47192bdbb))
+
+* ci(devcontainer): install act ([`1a385be`](https://github.com/wustl-data/fl23/commit/1a385be7ce229bcf0291e611430d7ae9a120385e))
+
+* ci: ruff rules ([`73bfc3e`](https://github.com/wustl-data/fl23/commit/73bfc3e8d16e72ca21f649aad1bd58bd5e0f23f0))
+
+* ci: poetry run pytest ([`5eb48cd`](https://github.com/wustl-data/fl23/commit/5eb48cd764e41616a80d941617c03025c69159e3))
+
+* ci: log in to ghcr ([`53e1e4d`](https://github.com/wustl-data/fl23/commit/53e1e4d20400972b0efda6addebd6c626e0fba56))
+
+* ci(ruff): noqa on stub param ([`8163202`](https://github.com/wustl-data/fl23/commit/816320272920ac5342a1194480dbd073564d32e2))
+
+* ci: use devcontainer for pytest run ([`b5cdbc5`](https://github.com/wustl-data/fl23/commit/b5cdbc5adb1fde0de1d0181631c72d5a6e736935))
+
+* ci(pre-commit): conventional commit pre-commit hooks ([`9aa19d6`](https://github.com/wustl-data/fl23/commit/9aa19d678555b27c8343a421e3181c29ce002de4))
+
+### Feature
+
+* feat: add submodule for hidden tests ([`6624cea`](https://github.com/wustl-data/fl23/commit/6624ceaea34691bfdab41de0332c361ea2b0dd6d))
+
+### Fix
+
+* fix: xfail on wrong test ([`6f7e694`](https://github.com/wustl-data/fl23/commit/6f7e694343e61c422e7650f89abea21b78b34b21))
+
+* fix(autograder): test typos ([`15fbb2a`](https://github.com/wustl-data/fl23/commit/15fbb2a5db0f0b18fb40c81079621c9adc952d18))
+
+### Test
+
+* test(autograder): mark xfail test 2 ([`aa0ab98`](https://github.com/wustl-data/fl23/commit/aa0ab98fe7b798f9fa3d5e11b06b010c57988d33))
+
+* test(autograder): mark xfail test 1 ([`5adb7e9`](https://github.com/wustl-data/fl23/commit/5adb7e994dc8efc222bed7c1d4dca409d684505d))
+
+### Unknown
+
+* remove pytest from pre commit ([`1df4173`](https://github.com/wustl-data/fl23/commit/1df41731aef84232eccded2f32ddd7df6eb729b6))
+
+* update autograder ([`f8ba665`](https://github.com/wustl-data/fl23/commit/f8ba665815e0c48f649081fffa7ad993496f5bcb))
+
+* update autograder ([`d9e603f`](https://github.com/wustl-data/fl23/commit/d9e603f2ab3c493c558bd1108a65cb96e56980cf))
+
+* Merge branch &#39;hw1-prerelease&#39; into hw1-upstream ([`4a6d44c`](https://github.com/wustl-data/fl23/commit/4a6d44c963237335169b55d36a5b50e62e367e05))
+
+* add .hypothesis folder to .gitignore ([`4a54e2d`](https://github.com/wustl-data/fl23/commit/4a54e2d98127907b95ead629f448707bc1300722))
+
+* install pandera ([`98d3025`](https://github.com/wustl-data/fl23/commit/98d3025cea195146383f761331a00bc9b0c36e23))
+
+* update autograder ([`d1d2317`](https://github.com/wustl-data/fl23/commit/d1d23176eaea200ea9668fd4e2dc2bfb311cfd27))
+
+* update autograder ([`80ed18c`](https://github.com/wustl-data/fl23/commit/80ed18cdcfa0f086867cbaf12a394b6f217c03df))
+
+* update submodule url ([`a724462`](https://github.com/wustl-data/fl23/commit/a724462a8020bda7671babe79652a13b29e14f01))
+
+* give token to checkout action ([`2ba7fc9`](https://github.com/wustl-data/fl23/commit/2ba7fc9b9e13c2d01a234915e4cbf01b0f48ff63))
+
+* checkout submodule in autograder ([`68e59d0`](https://github.com/wustl-data/fl23/commit/68e59d0ef439c5e30f2cf62510fccd23087bf941))
+
+* rename action ([`505458d`](https://github.com/wustl-data/fl23/commit/505458dc16e53fe4beabef8798745e138d290c08))
+
+* replace autograder ([`40478a2`](https://github.com/wustl-data/fl23/commit/40478a228c4cc761df3dca6dde7591fd6048e84d))
+
+* Merge branch &#39;hw1-prerelease&#39; of https://github.com/wustl-data/fl23 into hw1-prerelease ([`8b0840a`](https://github.com/wustl-data/fl23/commit/8b0840a097214644f007f2050ed973337ae992a2))
+
+* merge upstream ([`828a59d`](https://github.com/wustl-data/fl23/commit/828a59de150a036e21b65ef199dc462396220707))
+
+* update lockfile ([`a8d7972`](https://github.com/wustl-data/fl23/commit/a8d7972fad46661cc78e5f712bca0b26c9bdcac2))
+
+* add data wrangler extension ([`80d4bc6`](https://github.com/wustl-data/fl23/commit/80d4bc628ba3a576a6eeb433a1b239e5ddf1b2a4))
+
+* add blank tests ([`21616ca`](https://github.com/wustl-data/fl23/commit/21616ca94a217b66f405b652613519ddc9d6e1c6))
+
+* lighter workflows ([`0b71507`](https://github.com/wustl-data/fl23/commit/0b715070ca183c5105f1543a98212e6a2766bf22))
+
+* lighter dev container ([`e801627`](https://github.com/wustl-data/fl23/commit/e8016279ca0d2197f6e6f2b643cc9cbd4822ed12))
+
+* set autoreload setting globally for jupyter nbs ([`fcc1974`](https://github.com/wustl-data/fl23/commit/fcc19740940775a8f4aba043f886ef3043871dd8))
+
+* run all tests in github actions ([`f5156db`](https://github.com/wustl-data/fl23/commit/f5156dbe826715a9d78e6a9f900433274d5bd45f))
+
+* run full autograder pre-push ([`2da0761`](https://github.com/wustl-data/fl23/commit/2da07618bfb508317d8fbcbfc77e29877b4c00dc))
+
+* update submodule ([`8b14516`](https://github.com/wustl-data/fl23/commit/8b145168f2bbf377bd512718113e138032dd1a94))
+
+* update submodule ([`73f17f2`](https://github.com/wustl-data/fl23/commit/73f17f2c49894232b7a7ceb7e2f5fa4e4c242c3d))
+
+* remove publish step ([`61bac72`](https://github.com/wustl-data/fl23/commit/61bac727a1c95765d2d6acd9cdfb05d403a73f42))
+
+* add poetry and pre commit to dev container config ([`623d1f3`](https://github.com/wustl-data/fl23/commit/623d1f3759d861aedf759b44f044ee94ddb364eb))
+
+* add table styling to pytest report ([`350ad2d`](https://github.com/wustl-data/fl23/commit/350ad2db369f87bb490211cf141c7ac4914dc57c))
+
+* rearrange tests ([`f22743b`](https://github.com/wustl-data/fl23/commit/f22743b23fdd01f4017c13f8d6ead2a20c469360))
+
+
 ## v0.1.2+hw1 (2023-09-14)
 
 ### Fix
