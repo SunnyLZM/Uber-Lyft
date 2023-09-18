@@ -31,7 +31,7 @@ def avg_per_state(people: pd.DataFrame) -> pd.DataFrame:
 
 def large_states_adult_age(
     people: pd.DataFrame,
-    cutoff_population: int,
+    cutoff_population: int = 5000000,
 ) -> pd.DataFrame:
     """Compute the average age of state's population over 5000000."""
     # Problem 4
