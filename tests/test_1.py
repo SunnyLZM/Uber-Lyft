@@ -8,7 +8,7 @@ from fl23 import hw1
 def test_filter_after_cutoff_age():
     cutoff_age = 18
     people = pd.DataFrame({"Age": [17, 18]})
-    adults = hw1.filter_after_cutoff_age(people)
+    adults = hw1.filter_after_cutoff_age(people,cutoff_age)
     assert all(adults["Age"] >= cutoff_age)
 
 
