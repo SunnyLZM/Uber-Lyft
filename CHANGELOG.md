@@ -2,6 +2,13 @@
 
 
 
+## v0.3.1+hw1 (2023-09-19)
+
+### Fix
+
+* fix: adapt test to df ([`c89b08b`](https://github.com/wustl-data/fl23/commit/c89b08b5bd9ff0246089899881579ae073099acf))
+
+
 ## v0.3.0+hw1 (2023-09-19)
 
 ### Feature
