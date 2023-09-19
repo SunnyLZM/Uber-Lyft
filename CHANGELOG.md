@@ -2,6 +2,17 @@
 
 
 
+## v0.2.2+hw1 (2023-09-19)
+
+### Fix
+
+* fix: trigger on tag pushes ([`7c8417a`](https://github.com/wustl-data/fl23/commit/7c8417add6597865605607064ba95b8504a3dce7))
+
+* fix: only release on upstream repo ([`38d23e3`](https://github.com/wustl-data/fl23/commit/38d23e3fc010bc76cd2b804d3ffa7bd305df5197))
+
+* fix: add black formatter extension to default extensions ([`bef3a28`](https://github.com/wustl-data/fl23/commit/bef3a2801c896e167851dab90dd18d55f766b3f3))
+
+
 ## v0.2.1+hw1 (2023-09-18)
 
 ### Fix
