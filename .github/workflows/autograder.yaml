@@ -67,3 +67,21 @@ jobs:
           cache: poetry
       - run: poetry install
       - run: poetry run pytest --maxfail=0 tests/hidden/test_7.py
+  hiddentest3alt:
+    name: Hidden Test 3 (alternate)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Hidden Test 3
+        uses: actions/checkout@v4
+        with:
+            submodules: true
+            token: ${{ secrets.AUTOGRADER_KEY }}
+            fetch-depth: 0
+      - name: Install poetry
+        run: pipx install poetry
+      - uses: actions/setup-python@v4
+        with:
+          python-version: 3.11
+          cache: poetry
+      - run: poetry install
+      - run: poetry run pytest --maxfail=0 tests/hidden/test_3.py
