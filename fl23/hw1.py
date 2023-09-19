@@ -23,25 +23,25 @@ def avg_per_state(people: pd.DataFrame) -> pd.DataFrame:
 
 def large_states_adult_age(people: pd.DataFrame) -> pd.DataFrame:
     """Compute the average age of state's population over 5000000."""
-    #Problem 4
+#     #Problem 4
+#     cutoff_age =18
+#     cutoff_population = 5000000
+#     state = pd.read_csv("data/state_populations.csv")
+#     data = state.merge(people,on="State")
+#     large_states = data[data["Population"] > cutoff_population]
+#     adult = large_states[large_states["Age"]>=cutoff_age]
+#     result = adult.groupby("State")["Age"].mean().reset_index().rename(columns={"Age": "avg(Age)"})
+#     return result.reset_index(drop=True)
+    
+    #Problem 5
     cutoff_age =18
     cutoff_population = 5000000
     state = pd.read_csv("data/state_populations.csv")
-    data = state.merge(people,on="State")
-    large_states = data[data["Population"] > cutoff_population]
-    adult = large_states[large_states["Age"]>=cutoff_age]
-    result = adult.groupby("State")["Age"].mean().reset_index().rename(columns={"Age": "avg(Age)"})
+    large_states = state[state["Population"] > cutoff_population]
+    adult = people[people["Age"]>=cutoff_age]
+    data = adult.merge(large_states, on="State")
+    result = data.groupby("State")["Age"].mean().reset_index().rename(columns={"Age": "avg(Age)"})
     return result.reset_index(drop=True)
-    
-    #Problem 5
-    # cutoff_age =18
-    # cutoff_population = 5000000
-    # state = pd.read_csv("data/state_populations.csv")
-    # large_states = state[state["Population"] > cutoff_population]
-    # adult = people[people["Age"]>=cutoff_age]
-    # data = adult.merge(large_states, on="State")
-    # result = data.groupby("State")["Age"].mean().reset_index().rename(columns={"Age": "avg(Age)"})
-    # return result.reset_index(drop=True)
 
     #Problem 6
 #     state = pd.read_csv("data/state_populations.csv")
