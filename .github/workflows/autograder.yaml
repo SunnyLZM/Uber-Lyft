@@ -4,6 +4,8 @@ on:
     branches:
       - hw1-prerelease
       - hw1
+    tags:
+      - 1.*.*
   workflow_dispatch:
 
 jobs:

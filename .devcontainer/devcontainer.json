@@ -13,7 +13,8 @@
 				"ms-python.python",
 				"github.vscode-github-actions",
 				"tamasfe.even-better-toml",
-				"charliermarsh.ruff"
+				"charliermarsh.ruff",
+				"ms-python.black-formatter"
 			],
 			"settings": {
 				"python.editor.defaultFormatter": "ms-python.black-formatter",
