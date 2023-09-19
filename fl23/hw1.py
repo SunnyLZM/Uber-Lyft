@@ -1,6 +1,6 @@
 import duckdb
 import pandas as pd
-# from faker import Faker
+from faker import Faker
 
 
 def filter_after_cutoff_age(people: pd.DataFrame, cutoff_age: int) -> pd.DataFrame:
@@ -63,17 +63,17 @@ def large_states_adult_age(people: pd.DataFrame) -> pd.DataFrame:
     ).df()
 
 #Problem 8
-# def generate_people(n: int) -> pd.DataFrame:
-#     """Gnerate fake people table."""
-#     fake = Faker()
-#     data = {
-#         "first_name": [fake.first_name() for _ in range(n)],
-#         "last_name": [fake.last_name() for _ in range(n)],
-#         "Age": [fake.random_int(min=0, max=100) for _ in range(n)],
-#         "State": [fake.state() for _ in range(n)],
-#         "random_sentence": [fake.sentence() for _ in range(n)],
-#     }
-#     return pd.DataFrame(data)
+def generate_people(n: int) -> pd.DataFrame:
+    """Gnerate fake people table."""
+    fake = Faker()
+    data = {
+        "first_name": [fake.first_name() for _ in range(n)],
+        "last_name": [fake.last_name() for _ in range(n)],
+        "Age": [fake.random_int(min=0, max=100) for _ in range(n)],
+        "State": [fake.state() for _ in range(n)],
+        "random_sentence": [fake.sentence() for _ in range(n)],
+    }
+    return pd.DataFrame(data)
 
 
 
