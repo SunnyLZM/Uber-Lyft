@@ -2,6 +2,17 @@
 
 
 
+## v0.3.2+hw1 (2023-09-19)
+
+### Fix
+
+* fix: call the right test ([`c200b1b`](https://github.com/wustl-data/fl23/commit/c200b1b6619478259253588b6123193283895526))
+
+### Unknown
+
+* Merge branch &#39;hw1-upstream&#39; of https://github.com/wustl-data/fl23 into hw1-upstream ([`0b33c3a`](https://github.com/wustl-data/fl23/commit/0b33c3a084171a4fef67eb5bb17f47dcc84fe3bb))
+
+
 ## v0.3.1+hw1 (2023-09-19)
 
 ### Fix
