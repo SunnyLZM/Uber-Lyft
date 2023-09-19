@@ -21,8 +21,8 @@ def avg_per_state(people: pd.DataFrame) -> pd.DataFrame:
     result = people.groupby("State")["Age"].mean().reset_index().rename(columns={"Age": "avg(Age)"})
     return result.reset_index(drop=True)
 
-def large_states_adult_age(people: pd.DataFrame) -> pd.DataFrame:
-    """Compute the average age of state's population over 5000000."""
+# def large_states_adult_age(people: pd.DataFrame) -> pd.DataFrame:
+#     """Compute the average age of state's population over 5000000."""
     #Problem 4
     # cutoff_age =18
     # cutoff_population = 5000000
@@ -34,14 +34,14 @@ def large_states_adult_age(people: pd.DataFrame) -> pd.DataFrame:
     # return result.reset_index(drop=True)
     
     #Problem 5
-    cutoff_age =18
-    cutoff_population = 5000000
-    state = pd.read_csv("data/state_populations.csv")
-    large_states = state[state["Population"] > cutoff_population]
-    adult = people[people["Age"]>=cutoff_age]
-    data = adult.merge(large_states, on="State")
-    result = data.groupby("State")["Age"].mean().reset_index().rename(columns={"Age": "avg(Age)"})
-    return result.reset_index(drop=True)
+    # cutoff_age =18
+    # cutoff_population = 5000000
+    # state = pd.read_csv("data/state_populations.csv")
+    # large_states = state[state["Population"] > cutoff_population]
+    # adult = people[people["Age"]>=cutoff_age]
+    # data = adult.merge(large_states, on="State")
+    # result = data.groupby("State")["Age"].mean().reset_index().rename(columns={"Age": "avg(Age)"})
+    # return result.reset_index(drop=True)
 
     #Problem 6
 #     state = pd.read_csv("data/state_populations.csv")
@@ -62,17 +62,17 @@ def large_states_adult_age(people: pd.DataFrame) -> pd.DataFrame:
 #     ).df()
 
 #Problem 8
-def generate_people(n: int) -> pd.DataFrame:
-    """Gnerate fake people table."""
-    fake = Faker()
-    data = {
-        "first_name": [fake.first_name() for _ in range(n)],
-        "last_name": [fake.last_name() for _ in range(n)],
-        "Age": [fake.random_int(min=0, max=100) for _ in range(n)],
-        "State": [fake.state() for _ in range(n)],
-        "random_sentence": [fake.sentence() for _ in range(n)],
-    }
-    return pd.DataFrame(data)
+# def generate_people(n: int) -> pd.DataFrame:
+#     """Gnerate fake people table."""
+#     fake = Faker()
+#     data = {
+#         "first_name": [fake.first_name() for _ in range(n)],
+#         "last_name": [fake.last_name() for _ in range(n)],
+#         "Age": [fake.random_int(min=0, max=100) for _ in range(n)],
+#         "State": [fake.state() for _ in range(n)],
+#         "random_sentence": [fake.sentence() for _ in range(n)],
+#     }
+#     return pd.DataFrame(data)
 
 
 
