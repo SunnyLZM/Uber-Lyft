@@ -2,6 +2,19 @@
 
 
 
+## v0.3.3+hw1 (2023-09-19)
+
+### Fix
+
+* fix: update autograder ([`d4746f3`](https://github.com/wustl-data/fl23/commit/d4746f309fa568578f08a6a9a6ba252e79dbee2b))
+
+### Unknown
+
+* Merge branch &#39;hw1-upstream&#39; of https://github.com/wustl-data/fl23 into hw1-upstream ([`f30b147`](https://github.com/wustl-data/fl23/commit/f30b14775d00675fdf1b39e8e1f0200c9a475150))
+
+* update autograder ([`4295b9c`](https://github.com/wustl-data/fl23/commit/4295b9cc06b432f31eca68b014a965ab16399e51))
+
+
 ## v0.3.2+hw1 (2023-09-19)
 
 ### Fix
