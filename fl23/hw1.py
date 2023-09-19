@@ -1,6 +1,6 @@
 import duckdb
 import pandas as pd
-from faker import Faker
+# from faker import Faker
 
 
 def filter_after_cutoff_age(people: pd.DataFrame, cutoff_age: int) -> pd.DataFrame:

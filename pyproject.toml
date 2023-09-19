@@ -14,12 +14,12 @@ duckdb = { version = "^0.8.2.dev4025", allow-prereleases = true }
 pandas-stubs = "^2.0.3.230814"
 pytest-mock = "^3.11.1"
 pre-commit = "^3.4.0"
-faker = "^19.6.1"
 pytest-md-report = "^0.4.1"
 hypothesis = "^6.84.3"
 us = "^3.1.1"
 python-semantic-release = "^8.0.8"
 pandera = "^0.16.1"
+faker = "^19.6.1"
 
 [tool.poetry.group.dev.dependencies]
 ipykernel = "^6.25.2"
