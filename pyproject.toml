@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "fl23"
-version = "0.2.2+hw1"
+version = "0.3.0+hw1"
 description = ""
 authors = ["Ty Schlichenmeyer <ty.schlich@gmail.com>"]
 readme = "README.md"

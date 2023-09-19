@@ -2,6 +2,17 @@
 
 
 
+## v0.3.0+hw1 (2023-09-19)
+
+### Feature
+
+* feat: alternate test for hw3 ([`ae742cf`](https://github.com/wustl-data/fl23/commit/ae742cfec7f20d50ac8568c40ae0af0f3d124791))
+
+### Unknown
+
+* Merge branch &#39;hw1-upstream&#39; of https://github.com/wustl-data/fl23 into hw1-upstream ([`467a2f7`](https://github.com/wustl-data/fl23/commit/467a2f771b6c5131864bad58f76119de1c60a95c))
+
+
 ## v0.2.2+hw1 (2023-09-19)
 
 ### Fix
