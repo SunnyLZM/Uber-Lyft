@@ -33,15 +33,15 @@ def large_states_adult_age(people: pd.DataFrame) -> pd.DataFrame:
 #     result = adult.groupby("State")["Age"].mean().reset_index().rename(columns={"Age": "avg(Age)"})
 #     return result.reset_index(drop=True)
     
-    # #Problem 5
-    # cutoff_age =18
-    # cutoff_population = 5000000
-    # state = pd.read_csv("data/state_populations.csv")
-    # large_states = state[state["Population"] > cutoff_population]
-    # adult = people[people["Age"]>=cutoff_age]
-    # data = adult.merge(large_states, on="State")
-    # result = data.groupby("State")["Age"].mean().reset_index().rename(columns={"Age": "avg(Age)"})
-    # return result.reset_index(drop=True)
+#     #Problem 5
+#     cutoff_age =18
+#     cutoff_population = 5000000
+#     state = pd.read_csv("data/state_populations.csv")
+#     large_states = state[state["Population"] > cutoff_population]
+#     adult = people[people["Age"]>=cutoff_age]
+#     data = adult.merge(large_states, on="State")
+#     result = data.groupby("State")["Age"].mean().reset_index().rename(columns={"Age": "avg(Age)"})
+#     return result.reset_index(drop=True)
 
     #Problem 6
     state = pd.read_csv("data/state_populations.csv")
@@ -53,14 +53,14 @@ def large_states_adult_age(people: pd.DataFrame) -> pd.DataFrame:
     return duckdb.sql(
         f"""
         SELECT
-         people.State,
-         avg(Age)
+        people.State,
+        avg(Age)
         FROM people
         Inner JOIN state on people.State = state.State
         WHERE Age >={cutoff_age} and Population > {cutoff_population}
         GROUP BY people.State
-        """,
-    ).df()
+         """,
+     ).df()
 
 #Problem 8
 def generate_people(n: int) -> pd.DataFrame:
