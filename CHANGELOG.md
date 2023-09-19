@@ -2,6 +2,13 @@
 
 
 
+## v0.3.4+hw1 (2023-09-19)
+
+### Fix
+
+* fix: try one more state index ([`a53e67d`](https://github.com/wustl-data/fl23/commit/a53e67d2456f7a89b9af30ccc880283009e9e65c))
+
+
 ## v0.3.3+hw1 (2023-09-19)
 
 ### Fix
