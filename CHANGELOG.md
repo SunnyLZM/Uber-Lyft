@@ -2,6 +2,35 @@
 
 
 
+## v0.3.2+hw1 (2023-09-19)
+
+### Fix
+
+* fix: call the right test ([`c200b1b`](https://github.com/wustl-data/fl23/commit/c200b1b6619478259253588b6123193283895526))
+
+### Unknown
+
+* Merge branch &#39;hw1-upstream&#39; of https://github.com/wustl-data/fl23 into hw1-upstream ([`0b33c3a`](https://github.com/wustl-data/fl23/commit/0b33c3a084171a4fef67eb5bb17f47dcc84fe3bb))
+
+
+## v0.3.1+hw1 (2023-09-19)
+
+### Fix
+
+* fix: adapt test to df ([`c89b08b`](https://github.com/wustl-data/fl23/commit/c89b08b5bd9ff0246089899881579ae073099acf))
+
+
+## v0.3.0+hw1 (2023-09-19)
+
+### Feature
+
+* feat: alternate test for hw3 ([`ae742cf`](https://github.com/wustl-data/fl23/commit/ae742cfec7f20d50ac8568c40ae0af0f3d124791))
+
+### Unknown
+
+* Merge branch &#39;hw1-upstream&#39; of https://github.com/wustl-data/fl23 into hw1-upstream ([`467a2f7`](https://github.com/wustl-data/fl23/commit/467a2f771b6c5131864bad58f76119de1c60a95c))
+
+
 ## v0.2.2+hw1 (2023-09-19)
 
 ### Fix
