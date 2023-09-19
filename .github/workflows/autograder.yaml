@@ -84,4 +84,4 @@ jobs:
           python-version: 3.11
           cache: poetry
       - run: poetry install
-      - run: poetry run pytest --maxfail=0 tests/hidden/test_3.py
+      - run: poetry run pytest --maxfail=0 tests/hidden/test_3_alternate.py
