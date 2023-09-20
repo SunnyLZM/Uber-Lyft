@@ -8,5 +8,5 @@ def test_large_states_adult_age():
                            "Age": [17, 18, 19, 19]})
     pd.testing.assert_frame_equal(
         hw1.large_states_adult_age(people),
-        pd.DataFrame({"State": ["Missouri"], "Age":[18.5]}),
+        pd.DataFrame({"State": ["Missouri"], "avg(Age)":[18.5]}),
         )
