@@ -30,7 +30,7 @@ def large_states_adult_age(people: pd.DataFrame) -> pd.DataFrame:
     data = state.merge(people,on="State")
     large_states = data[data["Population"] > cutoff_population]
     adult = large_states[large_states["Age"]>=cutoff_age]
-    result = adult.groupby("State")["Age"].mean().reset_index().rename(columns={"Age": "avg(Age)"})
+    result = adult.groupby("State")["Age"].mean().reset_index().rename(columns={"Age": "Age"})
     return result.reset_index(drop=True)
     
     # #Problem 5
@@ -67,8 +67,8 @@ def generate_people(n: int) -> pd.DataFrame:
     """Gnerate fake people table."""
     fake = Faker()
     data = {
-        "First_Name": [fake.first_name() for _ in range(n)],
-        "Last_Name": [fake.last_name() for _ in range(n)],
+        "First Name": [fake.first_name() for _ in range(n)],
+        "Last Name": [fake.last_name() for _ in range(n)],
         "Age": [fake.random_int(min=0, max=100) for _ in range(n)],
         "State": [fake.state() for _ in range(n)],
         "Text": [fake.sentence() for _ in range(n)],
