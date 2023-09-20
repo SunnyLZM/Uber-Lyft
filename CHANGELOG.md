@@ -2,6 +2,13 @@
 
 
 
+## v0.3.5+hw1 (2023-09-20)
+
+### Fix
+
+* fix: remove broken assertion ([`5e5632e`](https://github.com/wustl-data/fl23/commit/5e5632ec200dfa301cc1a0ee8c18c7fd949f184b))
+
+
 ## v0.3.4+hw1 (2023-09-19)
 
 ### Fix
