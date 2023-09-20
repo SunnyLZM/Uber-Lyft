@@ -2,6 +2,40 @@
 
 
 
+## v0.3.6+hw1 (2023-09-20)
+
+### Fix
+
+* fix: remove bad assertion ([`378c5f4`](https://github.com/wustl-data/fl23/commit/378c5f4f4a83fcf05f43073bd1e97f72719e2fbc))
+
+
+## v0.3.5+hw1 (2023-09-20)
+
+### Fix
+
+* fix: remove broken assertion ([`5e5632e`](https://github.com/wustl-data/fl23/commit/5e5632ec200dfa301cc1a0ee8c18c7fd949f184b))
+
+
+## v0.3.4+hw1 (2023-09-19)
+
+### Fix
+
+* fix: try one more state index ([`a53e67d`](https://github.com/wustl-data/fl23/commit/a53e67d2456f7a89b9af30ccc880283009e9e65c))
+
+
+## v0.3.3+hw1 (2023-09-19)
+
+### Fix
+
+* fix: update autograder ([`d4746f3`](https://github.com/wustl-data/fl23/commit/d4746f309fa568578f08a6a9a6ba252e79dbee2b))
+
+### Unknown
+
+* Merge branch &#39;hw1-upstream&#39; of https://github.com/wustl-data/fl23 into hw1-upstream ([`f30b147`](https://github.com/wustl-data/fl23/commit/f30b14775d00675fdf1b39e8e1f0200c9a475150))
+
+* update autograder ([`4295b9c`](https://github.com/wustl-data/fl23/commit/4295b9cc06b432f31eca68b014a965ab16399e51))
+
+
 ## v0.3.2+hw1 (2023-09-19)
 
 ### Fix
