@@ -2,6 +2,13 @@
 
 
 
+## v0.3.6+hw1 (2023-09-20)
+
+### Fix
+
+* fix: remove bad assertion ([`378c5f4`](https://github.com/wustl-data/fl23/commit/378c5f4f4a83fcf05f43073bd1e97f72719e2fbc))
+
+
 ## v0.3.5+hw1 (2023-09-20)
 
 ### Fix
