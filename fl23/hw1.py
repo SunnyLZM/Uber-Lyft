@@ -30,7 +30,7 @@ def large_states_adult_age(people: pd.DataFrame) -> pd.DataFrame:
     data = state.merge(people,on="State")
     large_states = data[data["Population"] > cutoff_population]
     adult = large_states[large_states["Age"]>=cutoff_age]
-    result = adult.groupby("State")["Age"].mean().reset_index().rename(columns={"Age": "avg(Age)"})
+    result = adult.groupby("State")["Age"].mean().reset_index().rename(columns={"Age": "Age"})
     return result.reset_index(drop=True)
     
     # #Problem 5
