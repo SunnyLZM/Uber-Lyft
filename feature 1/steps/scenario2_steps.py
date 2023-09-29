@@ -3,7 +3,8 @@ from behave import *
 
 @given("Bad weather")
 def step_given(context):
-    context.weather = "bad"
+    if context.humidity < 30 or context.humidity>70:
+        context.weather = "bad"
 
 @when("Temperature lower than 30︒F")
 def step_when(context):
